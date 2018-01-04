@@ -1,0 +1,77 @@
+/*导航栏logo*/
+.layui-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+.logo {
+    width: 200px;
+    height: 40px;
+    margin-top: 10px;
+    background: url(../img/logo.png) no-repeat left center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    text-indent: -9999px;
+}
+.top-user{
+    height: 60px;
+}
+
+/*页面banner标题*/
+.top-title{
+    background-position: top center;
+    padding: 50px 0;
+}
+.top-title h1 {
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    font-weight: 100;
+}
+
+/*副标题上划线*/
+.border_top_green_2px {
+    border-top: 2px solid #60B878;
+}
+.border_top_black_2px {
+    border-top: 2px solid #1c2734;
+}
+.border_ddd{
+    border: 1px solid #ddd;
+}
+
+/*头像边框*/
+.border_tx_lcyan{border: 2px solid #636a7f;}
+
+/*图片经过效果*/
+.img-hover img {
+    max-width: 100%;
+    -moz-transition: all 1s ease 0s;
+    -ms-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    -webkit-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+}
+
+.img-hover:hover img {
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+/*区块阴影效果*/
+.shadow{
+    box-shadow: 0 0 50px #ddd;
+}
+/*页脚底部团队小照片组*/
+.group_list_xs li{
+    float: left;
+    padding: 5px;
+}
+.group_list_xs li img{
+    border: 2px solid rgba(255,255,255,0.2);
+}
+/*隐藏百度地图版权标志*/
+.anchorBL{display:none;}

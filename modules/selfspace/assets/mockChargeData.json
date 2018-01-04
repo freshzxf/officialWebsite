@@ -1,0 +1,47 @@
+{
+  "code": "200",
+  "data":[
+    {
+      "chargeDate": "2017-01",
+      "chargeReal": "1118.902",
+      "chargeContract": "1000.0",
+      "chargeSurplus": "5450.0",
+      "chargeAmount": "118.902 /11.89"
+    },
+    {
+      "chargeDate": "2017-02",
+      "chargeReal": "1118.902",
+      "chargeContract": "1000.0",
+      "chargeSurplus": "5450.0",
+      "chargeAmount": "118.902 /11.89"
+    },
+    {
+      "chargeDate": "2017-02",
+      "chargeReal": "1118.902",
+      "chargeContract": "1000.0",
+      "chargeSurplus": "5450.0",
+      "chargeAmount": "118.902 /11.89"
+    },
+    {
+      "chargeDate": "2017-02",
+      "chargeReal": "1118.902",
+      "chargeContract": "1000.0",
+      "chargeSurplus": "5450.0",
+      "chargeAmount": "118.902 /11.89"
+    },
+    {
+      "chargeDate": "2017-02",
+      "chargeReal": "1118.902",
+      "chargeContract": "1000.0",
+      "chargeSurplus": "5450.0",
+      "chargeAmount": "118.902 /11.89"
+    },
+    {
+      "chargeDate": "2017-02",
+      "chargeReal": "1118.902",
+      "chargeContract": "1000.0",
+      "chargeSurplus": "5450.0",
+      "chargeAmount": "118.902 /11.89"
+    }
+  ]
+}  

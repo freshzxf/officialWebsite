@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>智慧售电营业厅登录</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../assets/common/layui/css/layui.css">
+    <link rel="stylesheet" href="../../assets/common/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/common/css/base.css">
+</head>
+<body>
+<div class="pa_cor w360">
+    <h2 class="tc mb20">
+        <a href="../index/index.html">
+            <img src="../../assets/common/img/logo-xs.png" alt="" class="w40 h40" style="vertical-align: -7px" title="点击返回首页">
+            <span class="f30 f300 black" title="点击返回首页">SPIC能源销售</span>
+        </a>
+        <div class="mt10 gray">国家电投江西能源销售有限公司</div>
+    </h2>
+    <form class="layui-form">
+        <div class="layui-form-item">
+            <input type="text" name="account" placeholder="请输入手机号码"
+                   lay-verify="phone"lay-filter="phoneinput"
+                   autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-item">
+            <input type="password" name="password" placeholder="请输入密码" lay-verify="required"
+                   autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-item">
+            <input type="password" name="password" placeholder="请确认密码" lay-verify="required"
+                   autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-item">
+            <input value="" placeholder="请输入验证码"
+                   type="text"
+                   lay-verify="phonecode" autocomplete="off" class="layui-input w200 fl mr10">
+            <button lay-filter="phonecodebtn" class="w150 layui-btn layui-btn-primary layui-btn-disabled" disabled type="button">获取验证码</button>
+        </div>
+        <div class="layui-form-item" style="margin-bottom: 16px">
+            <button id="submitBtn" class="layui-btn w" lay-submit="" lay-filter="reg_index">
+                立即注册
+            </button>
+        </div>
+    </form>
+    <hr class="layui-bg-gray">
+    <div>
+        <a href="../index/index.html" class="f14">返回首页</a>
+        <a href="login.html" class="f14 fr">已有账号，返回登录</a>
+    </div>
+
+</div>
+
+<script src="../../assets/common/js/jquery.min.js" type="text/javascript"></script>
+<script src="../../assets/common/layui/layui.js" type="text/javascript"></script>
+
+<script>
+
+    layui.use(['form','util'], function () {
+        var form = layui.form,
+            util = layui.util,
+            $ = layui.jquery;
+
+        /*定义安全验证码验证规则*/
+        form.verify({
+            phonenum: function (value, item) { //value：表单的值、item：表单的DOM对象
+                var reg = /^1[3|4|5|7|8][0-9]{9}$/;
+                if(reg.test(value)){
+                    $('[lay-filter="phonecodebtn"]').prop('disabled',false).removeClass('layui-btn-disabled');
+                }
+            },
+        });
+
+        /*手机号码输入框值变化监听*/
+        $('[lay-filter="phoneinput"]').on('change', function(){
+            var reg = /^1[3|4|5|7|8][0-9]{9}$/;
+            var $phone_code_btn = $('.layui-form').find('[lay-filter="phonecodebtn"]');
+            var value = $(this).val();
+            if(reg.test(value)){
+                $phone_code_btn.prop('disabled',false).removeClass('layui-btn-disabled');
+            }else{
+                $phone_code_btn.prop('disabled',true).addClass('layui-btn-disabled');
+            }
+        });
+
+        /*点击发送验证码事件*/
+        $('[lay-filter="phonecodebtn"]').on('click', function(){
+            var ele = this
+            //示例
+            var endTime = new Date().setSeconds( 0 ), //假设为结束日期
+                serverTime = new Date().getTime(); //假设为当前服务器时间，这里采用的是本地时间，实际使用一般是取服务端的
+
+            util.countdown(endTime, serverTime, function(date, serverTime, timer){
+                var str = date[3] + '秒';
+                layui.$(ele).html('倒计时'+ str);
+            });
+        });
+
+        /*所有表单符合要求了提交函数*/
+        form.on('submit(reg_index)', function (data) {
+            loading = layer.load(2, {
+                shade: [0.2, '#000']
+            });
+            var param = data.field;
+            jq.post('/login/index.html', param, function (data) {
+                if (data.code == 200) {
+                    layer.close(loading);
+                    layer.msg(data.msg, {icon: 1, time: 1000}, function () {
+                        window.parent.location.href = '../index/index.html'
+                    });
+                } else {
+                    layer.close(loading);
+                    layer.msg(data.msg, {icon: 2, anim: 6, time: 1000});
+                }
+            });
+            return false;
+        });
+
+
+    })
+</script>
+</body>
+</html>

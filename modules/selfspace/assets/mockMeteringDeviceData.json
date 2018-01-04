@@ -1,0 +1,45 @@
+{
+  "code": "200",
+  "data":[
+    {
+      "dev": "",
+      "timeInt": "有功",
+      "lastTable": "",
+      "nowTable": "",
+      "rate": "",
+      "amount": ""
+    },
+    {
+      "dev": "",
+      "timeInt": "无功",
+      "lastTable": "",
+      "nowTable": "",
+      "rate": "",
+      "amount": ""
+    },
+    {
+      "dev": "",
+      "timeInt": "尖",
+      "lastTable": "",
+      "nowTable": "",
+      "rate": "",
+      "amount": ""
+    },
+    {
+      "dev": "",
+      "timeInt": "峰",
+      "lastTable": "",
+      "nowTable": "",
+      "rate": "",
+      "amount": ""
+    },
+    {
+      "dev": "",
+      "timeInt": "谷",
+      "lastTable": "",
+      "nowTable": "",
+      "rate": "",
+      "amount": ""
+    }
+  ]
+}  

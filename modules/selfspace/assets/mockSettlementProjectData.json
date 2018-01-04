@@ -1,0 +1,53 @@
+{
+  "code": "200",
+  "data":[
+    {
+      "sePro": "大工业用电（平）",
+      "seAmo": "0",
+      "sePri": "",
+      "seMon": "0"
+    },
+    {
+      "sePro": "非居民照明（平）",
+      "seAmo": "0",
+      "sePri": "",
+      "seMon": "0"
+    },
+    {
+      "sePro": "一般工商业（平）",
+      "seAmo": "0",
+      "sePri": "",
+      "seMon": "0"
+    },
+    {
+      "sePro": "非工业（平）",
+      "seAmo": "0",
+      "sePri": "",
+      "seMon": "0"
+    },
+    {
+      "sePro": "其他（平）",
+      "seAmo": "0",
+      "sePri": "",
+      "seMon": "0"
+    },
+    {
+      "sePro": "谷电费",
+      "seAmo": "0",
+      "sePri": "",
+      "seMon": "0"
+    },
+    {
+      "sePro": "峰电费",
+      "seAmo": "0",
+      "sePri": "",
+      "seMon": "0"
+    },
+    {
+      "sePro": "尖峰电费",
+      "seAmo": "0",
+      "sePri": "",
+      "seMon": "0"
+    }
+  ]
+}  

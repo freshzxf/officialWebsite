@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>客户中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="国家电投江西能源销售有限公司、能源、电力、江西">
+    <meta name="description" content="国家电投江西能源销售有限公司">
+    <link rel="stylesheet" href="../../assets/common/layui/css/layui.css">
+    <link rel="stylesheet" href="../../assets/common/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/common/css/base.css">
+    <link rel="stylesheet" href="../../assets/common/css/common.css">
+    <style>
+
+        #notice {
+            max-width: 1000px;
+            overflow: hidden;
+        }
+
+        #notice ul li {
+            float: left;
+            margin: 0 10px
+        }
+
+        .fly-panel {
+            margin-bottom: 15px;
+            border-radius: 2px;
+            background-color: #fff;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+        }
+
+        .fly-panel[pad20] {
+            padding: 20px;
+        }
+
+        .fly-panel-title {
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 15px;
+            border-bottom: 1px dotted #E9E9E9;
+            color: #333;
+            border-radius: 2px 2px 0 0;
+            font-size: 14px;
+        }
+
+        .fly-panel-main {
+            padding: 10px 15px;
+        }
+
+        .fly-panel-border {
+            border: 1px solid #e6e6e6;
+            box-shadow: none;
+        }
+
+        .fly-panel-border .fly-panel-title {
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        /* 用户中心 */
+        body .fly-user-main {
+            position: relative;
+            min-height: 600px;
+        }
+
+        .fly-user-main > .layui-nav {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+            height: 100%;
+            padding: 10px 0;
+        }
+
+        .fly-user-main > .layui-nav .layui-icon {
+            position: relative;
+            top: 2px;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .fly-user-main > .fly-panel {
+            min-height: 575px;
+            margin: 0 0 10px 215px;
+        }
+
+        .fly-user-main .fly-none {
+            min-height: 0;
+        }
+
+        .fly-panel-user[pad20] {
+            padding-top: 5px;
+        }
+
+        /*必填项标识*/
+        .layui-badge-dot.layui-badge.pa {
+            left: 8px;
+            top: 14px
+        }
+
+
+    </style>
+</head>
+<body class="bg_f4">
+<!--顶部导航-->
+<div class="layui-fluid layui-bg-black layui-header">
+    <div class="layui-main">
+        <a class="logo" href="index.html">
+            <img src="../../assets/common/img/logo.png" alt="layui">
+        </a>
+        <!--未登录-->
+        <div class="">
+            <ul class="layui-nav layui-layout-right tr" style="right: 210px" lay-filter="">
+                <li class="layui-nav-item layui-this"><a href="index.html">首页</a></li>
+                <li class="layui-nav-item"><a href="">合作意向</a></li>
+                <li class="layui-nav-item">
+                    <a href="../news/news.html">政策行业动态</a>
+                    <dl class="layui-nav-child tc">
+                        <dd><a href="">政策动态</a></dd>
+                        <dd><a href="">行业动态</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="../files/files_center.html">资料下载</a></li>
+                <li class="layui-nav-item"><a href="../about/about.html">关于我们</a></li>
+            </ul>
+            <div class="layui-btn-group layui-layout-right" style="top: 11px">
+                <a href="../login/login.html" class="layui-btn">登录</a>
+                <a href="../login/reg.html" class="layui-btn layui-btn-normal">注册</a>
+                <a href="../login/login_admin.html" class="layui-btn layui-btn-danger">管理员</a>
+            </div>
+        </div>
+        <!--已登陆-->
+        <div class="layui-hide">
+            <ul class="layui-nav layui-layout-right tr" style="right: 85px" lay-filter="">
+                <li class="layui-nav-item layui-this"><a href="">首页</a></li>
+                <li class="layui-nav-item"><a href="">合作意向</a></li>
+                <li class="layui-nav-item">
+                    <a href="">政策行业动态</a>
+                    <dl class="layui-nav-child tc">
+                        <dd><a href="">政策动态</a></dd>
+                        <dd><a href="">行业动态</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">资料下载</a></li>
+                <li class="layui-nav-item"><a href="">关于我们</a></li>
+                <li class="layui-nav-item layui-hide"><a href="">客户中心</a></li>
+                <li class="layui-nav-item ">
+                    <a href="javascript:;"><img src="../../assets/common/img/avatars/avatar0.jpg"
+                                                class="layui-nav-img">江铜集团</a>
+                    <dl class="layui-nav-child tc">
+                        <dd><a href="javascript:;">客户中心</a></dd>
+                        <dd><a href="javascript:;">安全退出</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <a href="" class="layui-btn layui-btn-danger layui-layout-right" style="top: 11px">管理员</a>
+        </div>
+    </div>
+</div>
+
+<!--用户顶部-->
+<div class="layui-main layui-bg-black mt15 radius_2" style="line-height: 60px;height: 60px">
+    <div class="ml10">
+        <span class="layui-badge-dot layui-bg-red mr5 rel" style="top: -2px"></span>
+        <span>信息公告栏：</span>
+    </div>
+    <div id="notice" class="layui-layout-right">
+        <ul>
+            <li><a href="#" class="white">新闻公告一</a></li>
+            <li><a href="#" class="white">新闻公告二新闻公告二新闻公告二新闻公告二</a></li>
+            <li><a href="#" class="white">新闻公告三新闻公告三</a></li>
+            <li><a href="#" class="white">新闻公告四新闻公告四新闻公告四</a></li>
+            <li><a href="#" class="white">新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五新闻公告五</a></li>
+            <li><a href="#" class="white">新闻公告六新闻公告六新闻公告六</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="layui-main mt15 fly-user-main">
+    <!--左侧菜单-->
+    <ul class="layui-nav layui-nav-tree">
+        <li class="layui-nav-item layui-this">
+            <a href="base_info.html"><i class="layui-icon">&#xe612;</i>基本信息</a>
+        </li>
+        <li class="layui-nav-item ">
+            <a href="charge_report.html"><i class="layui-icon">&#xe681;</i>负荷上报</a>
+        </li>
+        <li class="layui-nav-item ">
+            <a href="contract_info.html"><i class="layui-icon">&#xe600;</i>合同信息</a>
+        </li>
+        <li class="layui-nav-item ">
+            <a href="ready_purchase.html"><i class="layui-icon">&#xe63c;</i>意向购电</a>
+        </li>
+        <li class="layui-nav-item ">
+            <a href="settlement_report.html"><i class="layui-icon">&#xe62f;</i>结算上报</a>
+        </li>
+        <li class="layui-nav-item ">
+            <a href="business_consulting.html"><i class="layui-icon">&#xe606;</i>业务咨询</a>
+        </li>
+        <li class="layui-nav-item ">
+            <a href="trade_notice.html"><i class="layui-icon">&#xe645;</i>交易公告</a>
+        </li>
+    </ul>
+
+    <div class="fly-panel fly-panel-user bg_fff" pad20>
+        <div class="layui-tab layui-tab-brief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">用户基本信息</li>
+                <li>用电单元信息</li>
+                <li>用户登录信息</li>
+            </ul>
+            <div class="layui-tab-content" style="padding: 20px 0 0">
+                <div class="layui-form layui-form-pane layui-tab-item layui-show">
+                    <!--<form class="layui-form" lay-filter="baseInfo">-->
+                        <div class="layui-collapse">
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">公司信息</h2>
+                                <div class="layui-colla-content layui-show">
+                                    <div class="layui-row layui-col-space30">
+                                        <div class="layui-col-xs6">
+                                            <!--行一-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="企业全称">
+                                                    <span class="layui-badge-dot layui-badge pa"></span>
+                                                    企业全称
+                                                </label>
+                                                <div class="layui-input-block">
+                                                    <input lay-verify="required" type="text" class="layui-input"
+                                                           placeholder="请输入企业全称">
+                                                </div>
+                                            </div>
+                                            <!--行二-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="行业类别">
+                                                    <span class="layui-badge-dot layui-badge pa"></span>
+                                                    行业类别
+                                                </label>
+                                                <div class="layui-input-block">
+                                                    <select name="type" lay-verify="required">
+                                                        <option value="">请选择行业类别</option>
+                                                        <option value="0">工业</option>
+                                                        <option value="1">农业</option>
+                                                        <option value="2">商业</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--行三-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="购售电结算单位">
+                                                    <span class="layui-badge-dot layui-badge pa"></span>
+                                                    购售电结算单位</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入购售电结算单位">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <!--行四-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="营销客户数">营销客户数</label>
+                                                <div class="layui-input-block">
+                                                    <input type="number" class="layui-input" placeholder="请输入营销客户数">
+                                                </div>
+                                            </div>
+                                            <!--行五-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="企业所在工业园区">企业所在工业园区</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入企业所在工业园区">
+                                                </div>
+                                            </div>
+                                            <!--行六-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="地理区域">地理区域</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入地理区域">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">商务信息</h2>
+                                <div class="layui-colla-content layui-show">
+                                    <div class="layui-row layui-col-space30">
+                                        <div class="layui-col-xs6">
+                                            <!--行一-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="法人代表">
+                                                    <span class="layui-badge-dot layui-badge pa"></span>
+                                                    法人代表
+                                                </label>
+                                                <div class="layui-input-block">
+                                                    <input lay-verify="required" type="text" class="layui-input"
+                                                           placeholder="请输入公司法人代表（必填）">
+                                                </div>
+                                            </div>
+                                            <!--行二-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="社会信用代码">社会信用代码</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入社会信用代码">
+                                                </div>
+                                            </div>
+                                            <!--行三-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="开户银行">开户银行</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入开户银行号">
+                                                </div>
+                                            </div>
+                                            <!--行七-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="企业注册地址">企业注册地址</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入企业注册地址">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <!--行四-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="开户名称">开户名称</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入开户名称">
+                                                </div>
+                                            </div>
+                                            <!--行五-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="开户账号">开户账号</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入卡户账号">
+                                                </div>
+                                            </div>
+                                            <!--行六-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="组织机构代码">组织机构代码</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入组织机构代码">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">联系人信息</h2>
+                                <div class="layui-colla-content layui-show">
+                                    <div class="layui-row layui-col-space30">
+                                        <div class="layui-col-xs6">
+                                            <!--行一-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="联系人姓名">
+                                                    <span class="layui-badge-dot layui-badge pa"></span>
+                                                    联系人姓名
+                                                </label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入联系人姓名（必填）">
+                                                </div>
+                                            </div>
+                                            <!--行二-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="联系人职务">联系人职务</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入联系人职务">
+                                                </div>
+                                            </div>
+                                            <!--行三-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="联系人手机号">
+                                                    <span class="layui-badge-dot layui-badge pa"></span>
+                                                    联系人手机号
+                                                </label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入联系人手机号（必填）">
+                                                </div>
+                                            </div>
+                                            <!--行四-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="联系人办公电话">联系人办公电话</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入联系人办公电话">
+                                                </div>
+                                            </div>
+                                            <!--行五-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="联系人邮箱">联系人邮箱</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入联系人邮箱">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <!--行六-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="网址">网址</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" lay-verify="url" class="layui-input"
+                                                           placeholder="网站地址（如：www.xxx.com）">
+                                                </div>
+                                            </div>
+                                            <!--行七-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="邮编">邮编</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入邮政编码">
+                                                </div>
+                                            </div>
+                                            <!--行八-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="传真号码">传真</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入传真号码">
+                                                </div>
+                                            </div>
+                                            <!--行九-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="通信地址">通信地址</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入通信地址">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">参数信息</h2>
+                                <div class="layui-colla-content layui-show">
+                                    <div class="layui-row layui-col-space30">
+                                        <div class="layui-col-xs6">
+                                            <!--行一-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="最高供电电压">最高供电电压</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input"
+                                                           placeholder="请输入最高供电电压（单位：KV）">
+                                                </div>
+                                            </div>
+                                            <!--行二-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="运行容量">运行容量</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input"
+                                                           placeholder="请输入运行容量（单位：MVA）">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <!--三-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="合同容量">合同容量</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input"
+                                                           placeholder="请输入合同容量（单位：MVW）">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+              <!--          <button class="layui-btn mt30" lay-submit="" lay-filter="baseInfo">立即提交</button>
+                    </form>-->
+                </div>
+                <div class="layui-form layui-form-pane layui-tab-item">
+                    <div class="layui-collapse">
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">基本信息</h2>
+                            <div class="layui-colla-content layui-show">
+                                <form class="layui-form" action="">
+                                    <div class="layui-row layui-col-space30">
+                                        <div class="layui-col-xs6">
+                                            <!--行一-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="用电单元名称">用电单元名称</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入用电单元名称">
+                                                </div>
+                                            </div>
+                                            <!--行二-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="用电单元类型">用电单元类型</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请选择用电单元类型">
+                                                </div>
+                                            </div>
+                                            <!--行三-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="用电类别">用电类别</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请选择用电类别">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <!--行四-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="营销用户编号">营销用户编号</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入营销用户编号">
+                                                </div>
+                                            </div>
+                                            <!--行五-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="用电电压等级">用电电压等级</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input"
+                                                           placeholder="请选择用电电压等级（单位：KV）">
+                                                </div>
+                                            </div>
+                                            <!--行六-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="用电地址">用电地址</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入用电地址">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">参数信息</h2>
+                            <div class="layui-colla-content layui-show">
+                                <form class="layui-form" action="">
+                                    <div class="layui-row layui-col-space30">
+                                        <div class="layui-col-xs6">
+                                            <!--行一-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="变压器容量">
+                                                    <span class="layui-badge-dot layui-badge pa"></span>
+                                                    变压器容量
+                                                </label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入变压器容量（必填）">
+                                                </div>
+                                            </div>
+                                            <!--行二-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="电价行业类别">电价行业类别</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请选择电价行业类别">
+                                                </div>
+                                            </div>
+                                            <!--行三-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="电价编码">电价编码</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="请输入电价编码">
+                                                </div>
+                                            </div>
+                                            <!--行四-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="目录电价">目录电价</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input"
+                                                           placeholder="请输入目录电价（单价：元/MWH）">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs6">
+                                            <!--行五-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="是否执行峰谷标志">是否执行峰谷标志</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="是否执行峰谷标志">
+                                                </div>
+                                            </div>
+                                            <!--行六-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="是否参与功率因数考核">是否参与功率因数考核</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input" placeholder="是否参与功率因数考核">
+                                                </div>
+                                            </div>
+                                            <!--行七-->
+                                            <div class="layui-form-item">
+                                                <label class="layui-form-label" title="政府基金及附加">政府基金及附加</label>
+                                                <div class="layui-input-block">
+                                                    <input type="text" class="layui-input"
+                                                           placeholder="政府基金及附加（单价：元/MVA）">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form layui-form-pane layui-tab-item">
+                    <form action="/user/repass" method="post">
+                        <div class="layui-row layui-col-space30">
+                            <div class="layui-col-xs6">
+                                <!--输入旧密码-->
+                                <div class="layui-form-item">
+                                    <label for="L_nowpass" class="layui-form-label">当前密码</label>
+                                    <div class="layui-input-inline">
+                                        <input type="password" id="L_nowpass" name="nowpass" required
+                                               lay-verify="required" autocomplete="off" class="layui-input">
+                                    </div>
+                                </div>
+                                <!--输入新密码-->
+                                <div class="layui-form-item">
+                                    <label for="L_pass" class="layui-form-label">新密码</label>
+                                    <div class="layui-input-inline">
+                                        <input type="password" id="L_pass" name="pass" required lay-verify="required"
+                                               autocomplete="off" class="layui-input">
+                                    </div>
+                                </div>
+                                <!--确认新密码-->
+                                <div class="layui-form-item">
+                                    <label for="L_repass" class="layui-form-label">确认密码</label>
+                                    <div class="layui-input-inline">
+                                        <input type="password" id="L_repass" name="repass" required
+                                               lay-verify="required" autocomplete="off" class="layui-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-xs6">
+                                <!--上传头像-->
+                                <div class="layui-upload">
+                                    <button type="button" class="layui-btn" id="test1">上传头像</button>
+                                    <div class="layui-upload-list">
+                                        <img class="layui-upload-img circle w100 h100" id="demo1"
+                                             src="../../assets/common/img/avatars/kh.jpg">
+                                        <p id="demoText"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <button class="layui-btn" lay-filter="myInfo" lay-submit>确认修改</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--页脚-->
+<div class="layui-bg-cyan">
+    <div class="layui-main pt50 pb50">
+        <div class="layui-row layui-col-space30 lgray">
+            <div class="layui-col-xs6">
+                <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">关于我们<a href="about.html"
+                                                                                       class="fr lgray">了解详情</a>
+                </blockquote>
+                <p class=" lh200">
+                    <span class="fa fa-phone mr5 white" title="电话号码"></span><span class="mr10" title="电话号码">0791-83953621</span>
+                    <span class="fa fa-send ml10 mr5 white" title="企业邮箱"></span><span
+                        title="企业邮箱">3151511@spic.com</span>
+                </p>
+                <p class=" lh200">
+                    <span class="fa fa-fax mr5 white" title="传真号码"></span><span class="mr10"
+                                                                                title="传真号码">0791-83953621</span>
+                    <span class="fa fa-map-marker ml10 mr5 white" title="企业地址"></span><span title="企业地址">江西省南昌市青山湖区艾溪湖北路66号</span>
+                </p>
+                <p class="f14 lh200">创新创造是我们的特质。国家电投倡导全面创新创造，将创新融入技术、产品、制度、组织、文化、观念等方方面面；倡导全员创新创造，使创新创造成为国家电投人的品格。
+                </p>
+                <div class="mt30">
+                    <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">我们团队</blockquote>
+                    <ul class="group_list_xs">
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group1-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-col-xs6">
+                <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">企业位置</blockquote>
+                <div id="mapContainer" class="h300"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--版权声明-->
+<div class="layui-bg-black">
+    <div class="layui-main pt10 pb10 tc lgray">
+        <p class="f14">2017 © 国电电投江西能源销售有限公司. ALL Rights Reserved</p>
+    </div>
+</div>
+
+<script src="../../assets/common/js/jquery.min.js"></script>
+<script src="../../assets/common/layui/layui.js"></script>
+<script src="../../assets/lib/kxbdmarquee/jquery.kxbdmarquee.js"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=6ZTPFF2XmLknls8ByATGmZjD7G15gkvI"></script>
+<script src="../../assets/lib/baiduMap/jquery.baiduMap.min.js" type="text/javascript"></script>
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+    /*初始化无缝滚动*/
+    $("#notice").kxbdMarquee({
+        isEqual: false
+    });
+
+    layui.extend({
+        common: '{/}../../assets/common/js/common' // {/}的意思即代表采用自有路径，即不跟随 base 路径
+    }).use('common');
+
+    layui.config({
+        base: 'assets/js/' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use('baseInfo'); //加载入口
+</script>
+
+</body>
+</html>

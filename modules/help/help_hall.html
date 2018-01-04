@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>国家电投江西能源销售有限公司</title>
+    <link rel="stylesheet" href="../../assets/common/layui/css/layui.css">
+    <link rel="stylesheet" href="../../assets/common/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/common/css/base.css">
+    <link rel="stylesheet" href="../../assets/common/css/common.css">
+    <style>
+        /*更改手风琴样式*/
+        .layui-collapse{border: 0}
+        .layui-colla-title{padding: 0 15px;border-left: 2px solid #636363;}
+        .layui-icon.layui-colla-icon{left:auto;right: 15px}
+
+        .layui-colla-item{border: 0;margin-top: 5px}
+        .layui-colla-title{font-size: 16px}
+        .layui-colla-content{background-color: rgba(255,255,255,0.3);border: 0}
+        .layui-colla-content p{font-size: 14px;line-height: 2em}
+    </style>
+</head>
+<body class="bg_f4">
+
+<!--顶部导航-->
+<div class="layui-fluid layui-bg-black layui-header">
+    <div class="layui-main">
+        <a class="logo" href="index.html">
+            <img src="../../assets/common/img/logo.png" alt="layui">
+        </a>
+        <!--未登录-->
+        <div class="">
+            <ul class="layui-nav layui-layout-right tr" style="right: 210px" lay-filter="">
+                <li class="layui-nav-item layui-this"><a href="../index/index.html">首页</a></li>
+                <li class="layui-nav-item"><a href="">合作意向</a></li>
+                <li class="layui-nav-item">
+                    <a href="../news/news.html">政策行业动态</a>
+                    <dl class="layui-nav-child tc">
+                        <dd><a href="">政策动态</a></dd>
+                        <dd><a href="">行业动态</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">资料下载</a></li>
+                <li class="layui-nav-item"><a href="javascript:;">资料中心</a></li>
+                <li class="layui-nav-item"><a href="">关于我们</a></li>
+            </ul>
+            <div class="layui-btn-group layui-layout-right" style="top: 11px">
+                <a href="../login/login.html" class="layui-btn">登录</a>
+                <a href="../login/reg.html" class="layui-btn layui-btn-normal">注册</a>
+                <a href="" class="layui-btn layui-btn-danger">管理员</a>
+            </div>
+        </div>
+        <!--已登陆-->
+        <div class="layui-hide">
+            <ul class="layui-nav layui-layout-right tr" style="right: 85px" lay-filter="">
+                <li class="layui-nav-item layui-this"><a href="">首页</a></li>
+                <li class="layui-nav-item"><a href="">合作意向</a></li>
+                <li class="layui-nav-item">
+                    <a href="">政策行业动态</a>
+                    <dl class="layui-nav-child tc">
+                        <dd><a href="">政策动态</a></dd>
+                        <dd><a href="">行业动态</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">资料下载</a></li>
+                <li class="layui-nav-item"><a href="">关于我们</a></li>
+                <li class="layui-nav-item layui-hide"><a href="">客户中心</a></li>
+                <li class="layui-nav-item ">
+                    <a href="javascript:;"><img src="../../assets/common/img/avatars/avatar0.jpg"
+                                                class="layui-nav-img">江铜集团</a>
+                    <dl class="layui-nav-child tc">
+                        <dd><a href="javascript:;">客户中心</a></dd>
+                        <dd><a href="javascript:;">安全退出</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <a href="" class="layui-btn layui-btn-danger layui-layout-right" style="top: 11px">管理员</a>
+        </div>
+    </div>
+</div>
+
+<!--页面标题背景-->
+<div class="top-title tc" style="background: url('../../assets/common/img/top_banner.jpg') no-repeat center;">
+    <a href="../news/" title="公司新闻"><h1 class="layui-anim layui-anim-scale">帮助中心</h1></a>
+    <br><br>
+    <a href="javascript:;" id="onlineChatBtn" class="layui-btn layui-btn-big layui-anim layui-anim-scale">在线客服</a>
+    <a href="tel:0791-86877768" class="layui-btn layui-btn-primary layui-btn-big layui-anim layui-anim-scale" style="background:none;color:#fff;">0791-86877768</a>
+</div>
+
+<fieldset class="layui-elem-field layui-field-title mt30">
+    <legend class="tc">网厅使用帮助文档</legend>
+</fieldset>
+
+<div class="layui-main pt30 pb50">
+    <div class="layui-row layui-col-space30">
+        <div class="layui-col-xs12 layui-col-md6">
+            <div class="layui-collapse">
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title bg_fff">一、合作企业用电情况总览</h2>
+                    <div class="layui-colla-content">
+                        <p>该模块主要是用大屏展示的效果来展示实时的电量数据及用电情况。</p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title bg_fff">二、客户管理主要功能模块介绍</h2>
+                    <div class="layui-colla-content">
+                        <p class="black">2.1、用电客户管理</p>
+                        <p>主要用于查看及修改客户的详细信息，可用表格查看，也可双击客户弹出框查看；旁边也有不同的操作按钮进入不同的数据操作</p>
+                        <p class="text_indent black">2.1.1、新增客户与修改客户</p>
+                        <p class="text_indent">‘新增客户’用于新增一个新的客户并填写相关信息；‘修改客户’用于修改客户的信息。里面的信息主要分为‘登录信息’‘公司信息’‘商务信息’‘联系信息’‘参数信息’几个类别</p>
+                        <p class="text_indent black">2.1.2、用电单元管理</p>
+                        <p class="text_indent">用电单元指的就是客户所拥有的用电户号，每一个用电户号都对应一个用电单元，用电单元管理主要用于增删改查客户的用电单元信息</p>
+                        <p class="text_indent black">2.1.3、计量点管理</p>
+                        <p class="text_indent">计量点指的是装了几个采集装置，每个采集装置都对应一个计量点；计量点管理主要是新增及查看客户的计量点信息</p>
+                        <p class="text_indent black">2.1.4、电量管理</p>
+                        <p class="text_indent">在电量管理中可以查看到每个年份及月份的‘合同计划电量’‘已用电量’‘剩余电量’‘偏差率’；另外还能够修改客户的年度月份电量数据</p>
+                        <p class="text_indent black">2.1.5、购电订单管理</p>
+                        <p class="text_indent">主要用于查看与客户的历史订单及当前订单的信息，也可点击订单详细按钮查看更加详细的内容</p>
+                        <p class="black">2.2、供电公司管理</p>
+                        <p>主要是用于管理与公司及客户有协议的供电公司信息</p>
+                        <p class="black">2.3、供电公司管理</p>
+                        <p>主要用于管理通过网厅注册的客户，在此可以帮客户完善一些基本信息，另外客户在注册时所填写的用电单元信息也可以在此管理；如果客户有意向进行购电交易，他可以在网厅直接走意向购电流程，然后可以在这里查看客户的意向</p>
+                        <p class="black">2.4、发电企业</p>
+                        <p>主要用于管理和企业合作的发电企业的基本信息；另外也可以分别查看及编辑每个企业的发电机组信息</p>
+                        <p class="black">2.5、潜在用电客户管理</p>
+                        <p>用于管理有合作意向但还未签合同的客户的信息，在里面也可以进行管理用电单元、意向购电订单的操作及查看历史用电量</p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title bg_fff">三、合同管理主要功能模块介绍</h2>
+                    <div class="layui-colla-content">
+                        <p>合同管理分为‘零售电三方协议’‘购售电代理合同’‘合同模板管理’三个版块，主要功能是管理与客户的合同信息</p>
+                        <p class=" black">3.1、零售电三方协议</p>
+                        <p class="">用于管理客户的三方协议合同，基本信息可以通过表格形式来查看，详细信息可通过双击合同进行查看</p>
+                        <p class="black">3.2、购售电代理合同</p>
+                        <p class="">用于管理客户的购售电代理合同，基本信息可以通过表格形式来查看，详细信息可通过双击合同进行查看</p>
+                        <p class="black">3.3、合同模板管理</p>
+                        <p class="">用于管理合同的模板，模板就是一个未填写信息的合同大纲，方便工作人员创建电子版合同时快速引用</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-xs12 layui-col-md6">
+            <div class="layui-collapse">
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title bg_fff">四、业务管理主要功能模块介绍</h2>
+                    <div class="layui-colla-content">
+                        <p>业务管理主要是用于进行一些售电业务相关的事宜管理。</p>
+                        <p class="black">4.1、售电订单管理</p>
+                        <p>售电订单指的是公司已经和客户所完成的订单，在里面可以查看到每个客户每个时间段（年月）的订单电量信息，便于查看及管理。</p>
+                        <p class="black">4.2、结算上报管理</p>
+                        <p>用于给电力交易中心上报与客户的结算订单信息</p>
+                        <p class="black">4.3、客户咨询管理</p>
+                        <p>客户在网厅所咨询的问题将会到达此模块，后台人员方便在此答复客户的疑问。</p>
+                        <p class="black">4.4、合同计划电量管理</p>
+                        <p>用于管理合同所签订的计划电量，可根据实际用电情况再进行更改。</p>
+                        <p class="black">4.5、交易公告管理</p>
+                        <p>获取电力交易中心的交易公告信息，也可以手动进行添加修改，完成后客户可以通过网厅查单到实时的交易公告。</p>
+                        <p class="black">4.6、交易上报</p>
+                        <p>在此可以查看到每个客户的各年份及各月份的用电情况与合同计划电量、合同数据信息、实时用电量及剩余电量等信息的查询。</p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title bg_fff">五、网厅管理主要功能模块介绍</h2>
+                    <div class="layui-colla-content">
+                        <p>网厅管理主要功能就是管理网上营业厅上的信息，比如政策新闻、友情链接等。</p>
+                        <p class="black">5.1、政策行业动态</p>
+                        <p>该模块主要用于管理一些政策新闻，便于实时的更新政策动态，客户也能在网厅查看到实时的政策新闻。</p>
+                        <p class="black">5.2、客户评价管理</p>
+                        <p>该模块主要是为了管理客户在观看及使用我们系统之后的评价，在此可以进行编辑，并且在网厅展示给其他的客户观看。</p>
+                        <p class="black">5.3、员工头像管理</p>
+                        <p>添加公司的员工头像及职称，在平台上的‘我们团队’模块可以展示出来。</p>
+                        <p class="black">5.4、友情链接管理</p>
+                        <p>管理与公司相关的企业网站，方便客户了解并快速进入相关网站进行信息查询。</p>
+                        <p class="black">5.5、资料下载管理</p>
+                        <p>用于管理网厅页面的资料，可及时更新最新的政策文件等资料。</p>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <h2 class="layui-colla-title bg_fff">六、偏差管理主要功能模块介绍</h2>
+                    <div class="layui-colla-content">
+                        <p>可以选择时间来查看各个客户的用电情况及偏差率，更快速的了解到哪个客户的偏差率大，然后进行沟通解决。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--页脚-->
+<div class="layui-bg-cyan">
+    <div class="layui-main pt50 pb50">
+        <div class="layui-row layui-col-space30 lgray">
+            <div class="layui-col-xs6">
+                <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">关于我们<a href="about.html"
+                                                                                       class="fr lgray">了解详情</a>
+                </blockquote>
+                <p class=" lh200">
+                    <span class="fa fa-phone mr5 white" title="电话号码"></span><span class="mr10" title="电话号码">0791-83953621</span>
+                    <span class="fa fa-send ml10 mr5 white" title="企业邮箱"></span><span
+                        title="企业邮箱">3151511@spic.com</span>
+                </p>
+                <p class=" lh200">
+                    <span class="fa fa-fax mr5 white" title="传真号码"></span><span class="mr10"
+                                                                                title="传真号码">0791-83953621</span>
+                    <span class="fa fa-map-marker ml10 mr5 white" title="企业地址"></span><span title="企业地址">江西省南昌市青山湖区艾溪湖北路66号</span>
+                </p>
+                <p class="f14 lh200">创新创造是我们的特质。国家电投倡导全面创新创造，将创新融入技术、产品、制度、组织、文化、观念等方方面面；倡导全员创新创造，使创新创造成为国家电投人的品格。
+                </p>
+                <div class="mt30">
+                    <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">我们团队</blockquote>
+                    <ul class="group_list_xs">
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group1-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-col-xs6">
+                <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">企业位置</blockquote>
+                <div id="mapContainer" class="h300"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--版权声明-->
+<div class="layui-bg-black">
+    <div class="layui-main pt10 pb10 tc lgray">
+        <p class="f14">2017 © 国电电投江西能源销售有限公司. ALL Rights Reserved</p>
+    </div>
+</div>
+
+<script src="../../assets/common/js/jquery.min.js"></script>
+<script src="../../assets/common/layui/layui.js"></script>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=6ZTPFF2XmLknls8ByATGmZjD7G15gkvI"></script>
+<script src="../../assets/lib/baiduMap/jquery.baiduMap.min.js" type="text/javascript"></script>
+<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+<!--[if lt IE 9]>
+<script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+<script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+    layui.extend({
+        common: '{/}../../assets/common/js/common' // {/}的意思即代表采用自有路径，即不跟随 base 路径
+    }).use('common');
+
+    layui.config({
+        base: 'assets/js/' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use('help'); //加载入口
+</script>
+
+</body>
+</html>

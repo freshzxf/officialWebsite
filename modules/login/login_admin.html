@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>智慧售电营业厅登录</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../../assets/common/layui/css/layui.css">
+    <link rel="stylesheet" href="../../assets/common/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../assets/common/css/base.css">
+</head>
+<body style="background-color:#009688;">
+<div class="pa_cor bg_fff w360 pb50 pt50 pl50 pr50 radius_2">
+    <h2 class="tc mb20">
+        <a href="../index/index.html">
+            <img src="../../assets/common/img/logo-xs.png" alt="" class="w40 h40" style="vertical-align: -7px" title="点击返回首页">
+            <span class="f30 f300 black" title="点击返回首页">SPIC能源销售</span>
+        </a>
+        <div class="mt10 gray">管理员登录</div>
+    </h2>
+    <form class="layui-form">
+        <div class="layui-form-item">
+            <input type="text" name="adminname" placeholder="请输入账号" lay-verify="required" autocomplete="off"
+                   class="layui-input">
+        </div>
+        <div class="layui-form-item">
+            <input type="password" name="password" placeholder="请输入密码" lay-verify="required"
+                   autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-item">
+            <input id="code_input" value="" placeholder="请输入安全验证码"
+                   type="text" name="code" required
+                   lay-verify="verifycode" autocomplete="off" class="layui-input w200 fl mr10">
+            <div id="v_container" class="w150 fl over_hide" style="height: 38px;border-radius: 2px;"></div>
+        </div>
+        <div class="layui-form-item">
+            <button id="submitBtn" class="layui-btn w" lay-submit="" lay-filter="login_index">
+                立即登录
+            </button>
+        </div>
+    </form>
+    <hr class="layui-bg-gray">
+    <div>
+        <a href="../index/index.html" class="f14">返回首页</a>
+    </div>
+</div>
+
+<script src="../../assets/common/js/jquery.min.js" type="text/javascript"></script>
+<script src="../../assets/common/layui/layui.js" type="text/javascript"></script>
+<script src="../../assets/lib/gVerify/gVerify.js" type="text/javascript"></script>
+
+<script>
+    /*初始化验证码*/
+    var verifyCode = new GVerify("v_container");
+
+    layui.use('form', function () {
+        var form = layui.form,
+            $ = layui.jquery;
+        /*定义安全验证码验证规则*/
+        form.verify({
+            verifycode: function (value, item) { //value：表单的值、item：表单的DOM对象
+                var res = verifyCode.validate(value);
+                if (!res) {
+                    return "安全验证码错误";
+                } else {
+                }
+            }
+        });
+        /*所有表单符合要求了提交函数*/
+        form.on('submit(login_index)', function (data) {
+            loading = layer.load(2, {
+                shade: [0.2, '#000']
+            });
+            var param = data.field;
+            jq.post('/login/index.html', param, function (data) {
+                if (data.code == 200) {
+                    layer.close(loading);
+                    layer.msg(data.msg, {icon: 1, time: 1000}, function () {
+                        location.href = '../index/index.html';
+                    });
+                } else {
+                    layer.close(loading);
+                    layer.msg(data.msg, {icon: 2, anim: 6, time: 1000});
+                }
+            });
+            return false;
+        });
+
+    })
+</script>
+</body>
+</html>
