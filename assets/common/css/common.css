@@ -34,6 +34,9 @@
 .border_top_green_2px {
     border-top: 2px solid #60B878;
 }
+.border_top_blue_2px {
+    border-top: 2px solid #01AAED;
+}
 .border_top_black_2px {
     border-top: 2px solid #1c2734;
 }
@@ -45,8 +48,7 @@
 .border_tx_lcyan{border: 2px solid #636a7f;}
 
 /*图片经过效果*/
-.img-hover img {
-    max-width: 100%;
+.img-hover img{
     -moz-transition: all 1s ease 0s;
     -ms-transition: all 1s ease 0s;
     -o-transition: all 1s ease 0s;
