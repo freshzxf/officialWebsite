@@ -52,19 +52,25 @@
 .f40{font-size:40px}
 .f60{font-size:60px}
 .f80{font-size:80px}
+
 .fb{font-weight:bold}
 .fn{font-weight:normal}
 .fw300{font-weight:300!important;}
 .t2{text-indent:2em}
 .ls2{letter-spacing: 2px}
-.red,a.red{color:red!important;}
-.darkblue,a.darkblue{color:#039!important;}
+
+.red,a.red{color:#FF5722!important;}
+.dark_red,a.red{color:#FF5722!important;}
+.blue,a.blue{color:#01AAED!important;}
+.yellow,a.yellow{color:#FFB800!important;}
+.green,a.green{color:#5FB878!important;}
+.dark_green,a.dark_green{color:#009688!important;}
+
 .lgray,a.lgray{color: #cbcbcb!important;}
 .gray,a.gray{color:#888!important;}
 .white,a.white{color: #fff!important;}
 .black,a.black{color: #333!important;}
 .darkblack,a.darkblack{color: black;}
-.green{color: #60B878}
 .lh0{line-height:0}
 .lh100{line-height:100%}
 .lh150{line-height:150%}

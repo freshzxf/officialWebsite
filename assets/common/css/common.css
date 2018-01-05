@@ -61,6 +61,13 @@
     -webkit-transform: scale(1.1, 1.1);
     transform: scale(1.1, 1.1);
 }
+
+img.imgloading {
+    -o-object-fit: scale-down;
+    object-fit: scale-down;
+    max-width: 64px!important;
+    max-height: 64px!important;
+}
 /*区块阴影效果*/
 .shadow{
     box-shadow: 0 0 50px #ddd;
