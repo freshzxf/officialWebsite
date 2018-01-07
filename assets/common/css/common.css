@@ -1,14 +1,25 @@
 /*导航栏logo*/
-.layui-header {
+.top-nav {
     position: fixed;
+    z-index: 1000;
     top: 0;
     width: 100%;
     left: 0;
+    background-color: #393D49;
+}
+.top-nav .btn {
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    line-height: 60px;
 }
 .logo {
     width: 200px;
     height: 40px;
     margin-top: 10px;
+    margin-bottom: 10px;
     background: url(../img/logo.png) no-repeat left center;
     -webkit-background-size: cover;
     background-size: cover;
@@ -17,13 +28,28 @@
 .top-user{
     height: 60px;
 }
+@media screen and (max-device-width: 1000px) {
+    .pc {
+        display:none;
+    }
+
+    .mob {
+        display: block;
+    }
+
+    header {
+        height: auto;
+    }
+}
+
 
 /*页面banner标题*/
-.top-title{
+.caption{
     background-position: top center;
     padding: 50px 0;
+    margin-top: 60px;
 }
-.top-title h1 {
+.caption h1 {
     display: inline-block;
     font-size: 40px;
     color: #fff;
@@ -64,12 +90,6 @@
     transform: scale(1.1, 1.1);
 }
 
-img.imgloading {
-    -o-object-fit: scale-down;
-    object-fit: scale-down;
-    max-width: 64px!important;
-    max-height: 64px!important;
-}
 /*区块阴影效果*/
 .shadow{
     box-shadow: 0 0 50px #ddd;

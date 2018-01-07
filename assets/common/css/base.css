@@ -1,44 +1,24 @@
 @charset "utf-8";
 /*全局字体*/
 *{font-size: 16px;}
-/* 清除浮动 */
-.clearfix:before,.clearfix:after {
-    content:"";
-    display:table;
-}
-.clearfix:after {
-    clear:both;
-    overflow:hidden;
-}
-.clearfix {
-    zoom:1; /* for ie6 & ie7 */
-}
-.clear {
-    clear:both;
-    display:block;
-    font-size:0;
-    height:0;
-    line-height:0;
-    overflow:hidden;
-}
-/* 设置显示和隐藏，通常用来与 js 配合 */
-.hide {
-    display:none;
-}
-.block {
-    display:block;
-}
-.over_hide{overflow: hidden;}
+/*辅助类*/
+.pointer{cursor: pointer}
+
+/* 浮动 */
+.fl{float:left;display:inline}
+.fr{float:right;display:inline}
+.cb{clear:both}
+.cl{clear:left}
+.cr{clear:right}
+.clearfix:before,.clearfix:after {content:"";display:table;}
+.clearfix:after {clear:both;overflow:hidden;}
+.clearfix {zoom:1; /* for ie6 & ie7 */}
+
 /* 设置浮动，减少浮动带来的 bug */
-.fl,.fr {
-    display:inline;
-}
-.fl {
-    float:left;
-}
-.fr {
-    float:right;
-}
+.fl,.fr {display:inline;}
+.fl {float:left;}
+.fr {float:right;}
+
 /*文字排版、颜色*/
 .f12{font-size:12px}
 .f13{font-size:13px}
@@ -50,6 +30,7 @@
 .f30{font-size:30px}
 .f35{font-size:35px}
 .f40{font-size:40px}
+.f50{font-size:50px}
 .f60{font-size:60px}
 .f80{font-size:80px}
 
@@ -65,17 +46,18 @@
 .yellow,a.yellow{color:#FFB800!important;}
 .green,a.green{color:#5FB878!important;}
 .dark_green,a.dark_green{color:#009688!important;}
-
 .lgray,a.lgray{color: #cbcbcb!important;}
 .gray,a.gray{color:#888!important;}
 .white,a.white{color: #fff!important;}
 .black,a.black{color: #333!important;}
 .darkblack,a.darkblack{color: black;}
+
 .lh0{line-height:0}
 .lh100{line-height:100%}
 .lh150{line-height:150%}
 .lh180{line-height:180%}
 .lh200{line-height:200%}
+.lh250{line-height:250%}
 .lh300{line-height:300%}
 .unl{text-decoration:underline;}
 .no_unl{text-decoration:none;}
@@ -89,15 +71,11 @@
 .tr{text-align:right}
 .tj{text-align:justify}
 .text_indent{text-indent: 2em}
-.fl{float:left;display:inline}
-.fr{float:right;display:inline}
-.cb{clear:both}
-.cl{clear:left}
-.cr{clear:right}
+
 .vm{vertical-align:middle}
 .pr{position:relative}
 .pa{position:absolute}
-.auto_ctr{margin-left: auto;margin-right: auto}
+.auto{margin-left: auto;margin-right: auto}
 .pa_ctr{position: absolute;left: 50%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -116,11 +94,14 @@
     -ms-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);}
-.abs-right{position:absolute;right:0}
 .zoom{zoom:1}
 .hidden{visibility:hidden}
-.none{display:none}
+.none,.mob{display:none}
 .dis_table{display: table}
+.dis_cell{display: table-cell}
+.block {display:block;}
+.over_hide{overflow: hidden;}
+
 /*长度高度*/
 .w10{width:10px}
 .w20{width:20px}
@@ -146,6 +127,7 @@
 .h60{height:60px}
 .h80{height:80px}
 .h100{height:100px}
+.h150{height:150px}
 .h200{height:200px}
 .h300{height:300px}
 .h{height:100%}
@@ -157,6 +139,7 @@
 .m10{margin:10px}
 .m15{margin:15px}
 .m30{margin:30px}
+.mt0{margin-top:0}
 .mt5{margin-top:5px}
 .mt10{margin-top:10px}
 .mt15{margin-top:15px}
@@ -196,6 +179,8 @@
 .p10{padding:10px;}
 .p15{padding:15px;}
 .p30{padding:30px;}
+.p40{padding:40px;}
+.p50{padding:50px;}
 .pt0{padding-top:0px!important;}
 .pt5{padding-top:5px}
 .pt10{padding-top:10px}
@@ -224,4 +209,5 @@
 .circle{border-radius: 50%}
 .radius_2{border-radius: 2px}
 .radius_6{border-radius: 6px}
-
+/*边框*/
+.border_e6{border: 1px solid #e6e6e6}
