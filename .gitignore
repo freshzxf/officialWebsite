@@ -1,5 +1,4 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Finale template
+*.psd
 *.bak
 *.db
 *.avi
@@ -10,7 +9,5 @@
 *.mp3
 *.aif
 *.wav
-# Some versions of Finale have a bug and randomly save extra copies of
-# the music source as "<Filename> copy.mus"
-*copy.mus
+
 

@@ -43,6 +43,7 @@
 }
 
 
+
 /*页面banner标题*/
 .caption{
     background-position: top center;
@@ -104,3 +105,14 @@
 }
 /*隐藏百度地图版权标志*/
 .anchorBL{display:none;}
+
+/*响应式显示隐藏页面结构*/
+@media screen and (max-device-width: 1000px) {
+    .pc {
+        display:none;
+    }
+
+    .mob {
+        display: block;
+    }
+}
