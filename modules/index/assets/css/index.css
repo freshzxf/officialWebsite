@@ -1,7 +1,10 @@
 /*固定背景*/
 .bg_code {
-    background: url(../img/code-bg.jpg) no-repeat center fixed;
+    background: url(../img/74.jpg) no-repeat center fixed;
     background-size: cover;
+}
+.bg_csto {
+    background:#f4f4f4 url(../img/cstory-bg.png) no-repeat center;
 }
 
 .view_more {
@@ -35,14 +38,37 @@
     font-size: 30px;
 }
 
+.online_chat{
+    margin-top: 15px;
+}
+
+.online_chat a{
+    position: relative;
+    border-radius: 30px;
+    padding: 0 40px;
+    height: 40px;
+    line-height:40px;
+    border: 1px solid white;
+    font-size: 18px;
+    color: white;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+}
+.online_chat a:hover {
+    border-color: #333;
+    color: #333;
+    border-radius: 0;
+}
+
+
 /*快速入口*/
 i.fast-entry {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     background-color: #393d49;
     text-align: center;
     font-size: 45px;
-    line-height: 100px;
+    line-height: 120px;
     color: #fff;
     -o-border-radius: 100%;
     border-radius: 100%;
@@ -56,55 +82,36 @@ i.fast-entry:hover {
     background-color: #01AAED;
 }
 
-/*我们优势*/
-.img_box {
-    height: 200px;
-    overflow: hidden;
+/*成功案例*/
+.index-cases a {
+    width: 90%;
+    display: inline-block;
+    background: #393d49;
+    border: 1px #e6e6e6 solid;
 }
 
 /*客户评价*/
-.layui-carousel > [carousel-item] > * {
-    background-color: #fff;
-}
-
-/*成功案例*/
-
-.success_case {
+.customer {
     position: relative;
-    width: 1200px;
-    margin: 0 auto
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.success_case .swiper-container {
-    padding-bottom: 60px;
-}
-
-.success_case .swiper-slide {
-    width: 500px;
-    height: 400px;
+.customer .swiper-slide {
+    max-width: 700px;
+    overflow: hidden;
     background: #fff;
-    box-shadow: 0 8px 30px #1c2734;
+    border-radius: 4px;
+    box-shadow:1px 1px 8px rgba(0,0,0,0.1);
+    /*filter: blur(2px);*/
 }
 
-.success_case .swiper-slide img {
-    display: block;
-}
-
-.success_case .swiper-slide p {
-    line-height: 98px;
-    padding-top: 0;
-    text-align: center;
-    color: #636363;
-    font-size: 1.1em;
-    margin: 0;
-}
-
-.success_case .swiper-pagination {
+/*.customer .swiper-pagination {
     width: 100%;
     bottom: 20px;
 }
 
-.success_case .swiper-pagination-bullets .swiper-pagination-bullet {
+.customer .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 5px;
     border: 3px solid #fff;
     background-color: #d5d5d5;
@@ -113,13 +120,12 @@ i.fast-entry:hover {
     opacity: 1;
 }
 
-.success_case .swiper-pagination-bullets .swiper-pagination-bullet-active {
+.customer .swiper-pagination-bullets .swiper-pagination-bullet-active {
     border: 3px solid #5fb878;
     background-color: #fff;
-}
-
-.success_case .swiper-button-prev {
-    left: -30px;
+}*/
+.customer .swiper-button-prev {
+    left: 0px;
     width: 45px;
     height: 45px;
     background: url(../img/case/wm_button_icon.png) no-repeat;
@@ -127,13 +133,13 @@ i.fast-entry:hover {
     background-size: 100%;
 }
 
-.success_case .swiper-button-prev:hover {
+.customer .swiper-button-prev:hover {
     background-position: 0 -46px;
     background-size: 100%
 }
 
-.success_case .swiper-button-next {
-    right: -30px;
+.customer .swiper-button-next {
+    right: 0px;
     width: 45px;
     height: 45px;
     background: url(../img/case/wm_button_icon.png) no-repeat;
@@ -141,11 +147,12 @@ i.fast-entry:hover {
     background-size: 100%;
 }
 
-.success_case .swiper-button-next:hover {
+.customer .swiper-button-next:hover {
     background-position: 0 -139px;
     background-size: 100%
 }
 
+/*合作伙伴*/
 .partners {
     overflow: hidden;
     width: 1200px;

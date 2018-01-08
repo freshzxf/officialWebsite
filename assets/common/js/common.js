@@ -61,13 +61,6 @@ var _ajax = function (url, type, datatype, data, cb) {
 
 function LC_function() {
 
-    /*手机页面宽度处理*/
-    if (win_width < 1200) {
-        $('.layui-container').each(function () {
-            $(this).addClass('p0');
-        });
-    };
-
     /*首页ajax翻页*/
     if ($('.ajax_page').length > 0) {
         var ajax_page = function () {
@@ -101,16 +94,6 @@ function LC_function() {
         });
     };
 
-    /*大轮播加载*/
-    if ($('.banner').length > 0) {
-        var lunbo_banner = lay.carousel.render({
-            elem: '.banner',
-            width: '100%',
-            height: $('.banner').attr('data-h'),
-            interval: 5000,
-            anim: 'fade'
-        });
-    };
 
     /*推荐文章轮播加载*/
     if ($('.comlist').length > 0) {
@@ -130,16 +113,17 @@ function LC_function() {
     /*处理手机导航问题*/
     if ($('.top-nav').length > 0) {
         var topnav = $('.top-nav');
-        topnav.children('._open').on('click', function () {
+        // var menu = '<ul class="layui-nav layui-nav-tree layui-nav-side" style="display:none;">' + topnav.children('.layui-nav').html() + '</ul>';
+        topnav.children('.open').on('click', function() {
             $(this).hide(0);
             topnav.children('.layui-nav').addClass('layui-nav-tree layui-nav-side').show(200);
-            topnav.children('._close').show(0);
+            topnav.children('.close').show(0);
         });
-        topnav.children('._close').on('click', function () {
+        topnav.children('.close').on('click', function() {
             $(this).hide(0);
             topnav.children('.layui-nav').hide(0).removeClass('layui-nav-tree layui-nav-side');
-            topnav.children('._open').show(0);
-        });
+            topnav.children('.open').show(0);
+        })
         if (win_width < 1200) {
             $('.layui-nav-item').each(function () {
                 if ($(this).children('.layui-nav-child').length > 0) {

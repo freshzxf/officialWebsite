@@ -2,6 +2,10 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="贵州万创宏达科技有限责任公司、科技、网络、智慧、家校互动、营养餐系统">
+    <meta name="keywords" content="万创宏达科科技_网站建设_网页制作_网络公司_微信公众号_流媒体_微信小程序开发_家校互动_智慧校园_营养餐系统">
     <title>贵州万创宏达科技有限责任公司</title>
     <link rel="stylesheet" href="../../assets/common/layui/css/layui.css">
     <link rel="stylesheet" href="../../assets/common/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -16,10 +20,12 @@
 </head>
 <body>
 <!--顶部导航-->
-<div class="layui-header layui-bg-black">
-    <div class="layui-main">
+<div class="layui-fluid">
+    <div class="layui-row top-nav">
         <div class="logo fl"><a href="http://www.xiaoyut.cn" class="block w h">万创宏达</a></div>
-        <ul class="layui-nav fl">
+        <i class="layui-icon btn open mob">&#xe65f;</i>
+        <i class="layui-icon btn close none">&#xe671;</i>
+        <ul class="layui-nav fr pc">
             <li class="layui-nav-item layui-this"><a href="index.html">网站首页</a></li>
             <li class="layui-nav-item "><a href="">业务范围</a></li>
             <li class="layui-nav-item ">
@@ -32,7 +38,7 @@
                 </dl>
             </li>
             <li class="layui-nav-item ">
-                <a href="">成功案例</a>
+                <a href="../cases/cases.html">成功案例</a>
                 <dl class="layui-nav-child">
                     <dd><a href="">企业门户</a></dd>
                     <dd><a href="">OA办公自动化系统</a></dd>
@@ -43,148 +49,238 @@
             <li class="layui-nav-item "><a href="">关于万创</a></li>
             <li class="layui-nav-item "><a href="">联系万创</a></li>
         </ul>
-        <ul class="layui-nav fr">
+        <!--<ul class="layui-nav fr">
             <li class="layui-nav-item top-user"><i class="fa fa-user-circle-o f25 mr5 vm"></i>管理员</li>
-        </ul>
+        </ul>-->
     </div>
 </div>
-<!--首页轮播-->
-<div id="banner" class="layui-carousel banner mt60" data-h="500">
+
+<!--pc端banner-->
+<div id="banner" class="layui-carousel banner mt60 pc" data-h="350">
     <div carousel-item>
-        <div style="background: url('assets/img/banners/edubanner.png') center center no-repeat">
+        <div style="background: url('assets/img/banners/edubanner.png') center center no-repeat;-webkit-background-size: cover;background-size: cover;">
             <div class="pa_cor tc white ">
-                <h1 class="white f40 ls2">智慧校园综合解决方案</h1>
-                <p class="mt30">针对从 K12 到高校一系列的学校场景，开放网易技术与教育资源帮助传统学校转型升级。</p>
+                <h1 class="white f40 ls2 layui-elip">智慧校园综合解决方案</h1>
+                <p class="mt30 layui-elip">针对从 K12 到高校一系列的学校场景，开放网易技术与教育资源帮助传统学校转型升级。</p>
                 <div class="view_more">
                     <a href="" class="layui-inline" target="_blank">了解详情</a>
                 </div>
             </div>
         </div>
-        <div style="background: url('assets/img/banners/banner1.jpg') center center no-repeat"></div>
-    </div>
-</div>
-
-<!--快捷入口-->
-<div class="">
-    <div class="layui-main">
-        <div class="layui-row tc pt50 pb50">
-            <div class="layui-col-xs12 mb30 layui-anim layui-anim-scale">
-                <h3 class="mb10 f35 fw300">我们的服务</h3>
-                <p class="pt5 mb10 gray dis_table auto_ctr border_top_blue_2px">Services</p>
+        <div style="background: url('assets/img/banners/banner2.jpg') center center no-repeat;-webkit-background-size: cover;background-size: cover;">
+            <div class="pa_cor tc white ">
+                <h1 class="white f40 ls2 layui-elip">用科技铸造未来</h1>
+                <fieldset class="layui-field-title mt30" style="border-color: white;border-style: solid">
+                    <legend class="f20 layui-elip">让世界见证万创的力量</legend>
+                </fieldset>
             </div>
-            <div class="layui-col-xs2 layui-anim layui-anim-scale">
-                <a href="../login/login.html" title="客户注册">
-                    <i class="fa fa-user fast-entry mb20"></i>
-                    <h3 class="mb10 f25 fw300">用户登录</h3>
-                    <p>安全快速登录</p>
-                </a>
+        </div>
+        <div style="background: url('assets/img/banners/banner3.jpg') no-repeat center center;-webkit-background-size: cover;background-size: cover;">
+            <div class="pa_cor white ">
+                <h1 class="white f40 ls2 layui-elip">双线千兆云服务器</h1>
+                <p class="mt30 layui-elip">虚拟化、分布式集群云端计算服务</p>
+                <p class="mt10 layui-elip">稳定、安全、弹性、高性能</p>
+                <p class="mt10 layui-elip">24小时无忧技术支持</p>
             </div>
-            <div class="layui-col-xs2 layui-anim layui-anim-scale">
-                <a href="../login/reg.html" title="" target="_blank">
-                    <i class="fa fa-pencil-square fast-entry mb20"></i>
-                    <h3 class="mb10 f25 fw300">用户注册</h3>
-                    <p>快速体验智慧管理</p>
-                </a>
-            </div>
-            <div class="layui-col-xs2 layui-anim layui-anim-scale">
-                <a href="" title="">
-                    <i class="fa fa-users fast-entry mb20" target="_blank"></i>
-                    <h3 class="mb10 f25 fw300">合作意向</h3>
-                    <p>专业队伍强强联合</p>
-                </a>
-            </div>
-            <div class="layui-col-xs2 layui-anim layui-anim-scale">
-                <a href="../news/news.html" title="" target="_blank">
-                    <i class="fa fa-file-text fast-entry mb20"></i>
-                    <h3 class="mb10 f25 fw300">新闻中心</h3>
-                    <p>行业动态公司新闻</p>
-                </a>
-            </div>
-            <div class="layui-col-xs2 center layui-anim layui-anim-scale">
-                <a href="../files/files_center.html" title="" target="_blank">
-                    <i class="fa fa-clipboard fast-entry mb20"></i>
-                    <h3 class="mb10 f25 fw300">资料下载</h3>
-                    <p>合同模板行业资料</p>
-                </a>
-            </div>
-            <div class="layui-col-xs2 layui-anim layui-anim-scale">
-                <a href="../about/about.html" title="">
-                    <i class="fa fa-windows fast-entry mb20" target="_blank"></i>
-                    <h3 class="mb10 f25 fw300">关于我们</h3>
-                    <p>公司相关介绍</p>
-                </a>
+        </div>
+        <div style="background: url('assets/img/banners/banner4.jpg') center center no-repeat;-webkit-background-size: cover;background-size: cover;">
+            <div class="pa_cor tr white" style="margin-left: 330px">
+                <h1 class="white f40 ls2 layui-elip">创新企业定制服务</h1>
+                <p class="mt30 layui-elip"><i class="f30">24</i>小时咨询热线：0791-83953365</p>
+                <p class="mt10 layui-elip">敢于突破，勇于创新，为您带来专属设计</p>
+                <div class="online_chat">
+                    <a href="" class="layui-inline" target="_blank">立即咨询</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<!--移动端banner-->
+<div class="mt60 mob ">
+    <img src="assets/img/banners/mon-banner.jpg" class="w" alt="万创科技">
+</div>
+
+<!--提供服务-->
+<div class="layui-container pt50 pb50">
+    <div class="layui-row tc">
+        <div class="layui-col-xs12 layui-anim layui-anim-scale">
+            <h3 class="mb10 f35 fw300">我们的服务</h3>
+            <p class="pt5 mb10 gray dis_table auto border_top_blue_2px">Services</p>
+        </div>
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 layui-anim layui-anim-scale">
+            <a href="../login/login.html" title="企业网站定制">
+                <i class="fa fa-desktop fast-entry mb20"></i>
+                <h3 class="mb10 f25 fw300 layui-elip">企业宣传网站</h3>
+                <p class="lh150 layui-elip">高端定制官网（PC+H5）</p>
+            </a>
+        </div>
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 layui-anim layui-anim-scale">
+            <a href="../login/login.html" title="OA/CRM管理软件">
+                <i class="fa fa-pencil-square fast-entry mb20"></i>
+                <h3 class="mb10 f25 fw300 layui-elip">OA/CRM管理软件</h3>
+                <p class="lh150 layui-elip">全智能云计算办公管理自动化</p>
+            </a>
+        </div>
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 layui-anim layui-anim-scale">
+            <a href="../login/login.html" title="微信软件服务">
+                <i class="fa fa-desktop fast-entry mb20"></i>
+                <h3 class="mb10 f25 fw300 layui-elip">微信软件服务</h3>
+                <p class="lh150 layui-elip">公众号、小程序定制开发</p>
+            </a>
+        </div>
+        <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 layui-anim layui-anim-scale">
+            <a href="../login/login.html" title="企业网站定制">
+                <i class="fa fa-desktop fast-entry mb20"></i>
+                <h3 class="mb10 f25 fw300 layui-elip">移动APP</h3>
+                <p class="lh150 layui-elip">流媒体、APP服务</p>
+            </a>
+        </div>
+    </div>
+</div>
+
 <!--平台优势-->
 <div class="bg_f4">
-    <div class="layui-main">
+    <div class="layui-container">
         <div class="layui-row tc pt50 pb50 layui-col-space30">
             <div class="layui-col-xs12 mb30 layui-anim layui-anim-scale">
                 <h3 class="mb10 f35 fw300">我们的优势</h3>
-                <p class="pt5 mb10 gray dis_table auto_ctr border_top_blue_2px">Advantage</p>
+                <p class="pt5 mb10 gray dis_table auto border_top_blue_2px">Advantage</p>
             </div>
-
-            <div class="layui-col-xs3">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 layui-anim layui-anim-scale">
                 <a class="img-hover" href="" title="行业翘楚">
-                    <div class="img_box mb10">
-                        <img class="mw" src="assets/img/advantage/advantage05.jpg">
+                    <div class="over_hide mb10">
+                        <img class="mh w" src="assets/img/advantage/advantage05.jpg">
                     </div>
                     <fieldset class="layui-field-title">
                         <legend class="f20 pl10 pr10">行业翘楚</legend>
-                        <p class="f14 gray lh150">世界500强，电力行业领军企业</p>
+                        <p class="f14 gray lh150">多项国家级奖项，专利证书</p>
                     </fieldset>
                 </a>
             </div>
-            <div class="layui-col-xs3">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 layui-anim layui-anim-scale">
                 <a class="img-hover" href="" title="便捷操作">
-                    <div class="img_box mb10">
-                        <img class="mw" src="assets/img/advantage/advantage06.jpg">
+                    <div class="over_hide mb10">
+                        <img class="mh w" src="assets/img/advantage/advantage06.jpg">
                     </div>
                     <fieldset class="layui-field-title">
                         <legend class="f20 pl10 pr10">便捷操作</legend>
-                        <p class="f14 gray lh150">人性化设计，智能管理</p>
+                        <p class="f14 gray lh150">人性化设计，便捷高效操作</p>
                     </fieldset>
                 </a>
             </div>
-            <div class="layui-col-xs3">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 layui-anim layui-anim-scale">
                 <a class="img-hover" href="" title="资深团队">
-                    <div class="img_box mb10">
-                        <img class="mw" src="assets/img/advantage/advantage03.jpeg">
+                    <div class="over_hide mb10">
+                        <img class="mh w" src="assets/img/advantage/advantage03.jpeg">
                     </div>
                     <fieldset class="layui-field-title">
                         <legend class="f20 pl10 pr10">资深团队</legend>
-                        <p class="f14 gray lh150">20年资深行业经验</p>
+                        <p class="f14 gray lh150">IT行业精英，统一协作开发</p>
                     </fieldset>
                 </a>
             </div>
-            <div class="layui-col-xs3">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 layui-anim layui-anim-scale">
                 <a class="img-hover" href="" title="全程服务">
-                    <div class="img_box mb10">
-                        <img class="mw" src="assets/img/advantage/advantage07.jpg">
+                    <div class="over_hide mb10">
+                        <img class="mh w" src="assets/img/advantage/advantage07.jpg">
                     </div>
                     <fieldset class="layui-field-title">
                         <legend class="f20 pl10 pr10">全程服务</legend>
-                        <p class="f14 gray lh150">购售电一体化，全程一对一服务</p>
+                        <p class="f14 gray lh150">售前售后一体化，全程一对一服务</p>
                     </fieldset>
                 </a>
             </div>
-
         </div>
     </div>
 </div>
-<!--客户信赖-->
+
+<!--成功案例-->
+<div class="pt50 pb50">
+    <div class="mb30 tc layui-anim layui-anim-scale">
+        <h3 class="mb10 f35 fw300">成功案例</h3>
+        <p class="pt5 mb10 gray dis_table auto border_top_blue_2px">Cases</p>
+    </div>
+    <div class="layui-container">
+        <div class="layui-row layui-col-space20">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 mb20 tc" >
+                <a class="img-hover block border_e6" href="" title="化妆品公司">
+                    <div class="h200 over_hide">
+                        <img class="w" src="assets/img/case/firm1.jpg">
+                    </div>
+                    <h3 class="pl10 pr10 lh250 f18 layui-elip layui-bg-cyan">化妆品公司化妆品公司化妆品公司化妆品公司</h3>
+                </a>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 mb20 tc">
+                <a class="img-hover block border_e6" href="" title="化妆品公司">
+                    <div class="h200 over_hide">
+                        <img class="w" src="assets/img/case/firm1.jpg">
+                    </div>
+                    <h3 class="pl10 pr10 lh250 f18 layui-bg-cyan">化妆品公司</h3>
+                </a>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 mb20 tc">
+                <a class="img-hover block border_e6" href="" title="化妆品公司">
+                    <div class="h200 over_hide">
+                        <img class="w" src="assets/img/case/firm1.jpg">
+                    </div>
+                    <h3 class="pl10 pr10 lh250 f18 layui-bg-cyan">化妆品公司</h3>
+                </a>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 mb20 tc">
+                <a class="img-hover block border_e6" href="" title="化妆品公司">
+                    <div class="h200 over_hide">
+                        <img class="w" src="assets/img/case/firm1.jpg">
+                    </div>
+                    <h3 class="pl10 pr10 lh250 f18 layui-bg-cyan">化妆品公司</h3>
+                </a>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 mb20 tc" >
+                <a class="img-hover block border_e6" href="" title="化妆品公司">
+                    <div class="h200 over_hide">
+                        <img class="w" src="assets/img/case/firm1.jpg">
+                    </div>
+                    <h3 class="pl10 pr10 lh250 f18 layui-elip layui-bg-cyan">化妆品公司化妆品公司化妆品公司化妆品公司</h3>
+                </a>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 mb20 tc">
+                <a class="img-hover block border_e6" href="" title="化妆品公司">
+                    <div class="h200 over_hide">
+                        <img class="w" src="assets/img/case/firm1.jpg">
+                    </div>
+                    <h3 class="pl10 pr10 lh250 f18 layui-bg-cyan">化妆品公司</h3>
+                </a>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 mb20 tc">
+                <a class="img-hover block border_e6" href="" title="化妆品公司">
+                    <div class="h200 over_hide">
+                        <img class="w" src="assets/img/case/firm1.jpg">
+                    </div>
+                    <h3 class="pl10 pr10 lh250 f18 layui-bg-cyan">化妆品公司</h3>
+                </a>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3 mb20 tc">
+                <a class="img-hover block border_e6" href="" title="化妆品公司">
+                    <div class="h200 over_hide">
+                        <img class="w" src="assets/img/case/firm1.jpg">
+                    </div>
+                    <h3 class="pl10 pr10 lh250 f18 layui-bg-cyan">化妆品公司</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--醒目数字-->
 <div class="bg_code">
-    <div class="layui-main">
+    <div class="layui-container">
         <div class="layui-row white tc pt50 pb50 lh300 ls2">
             <div class="layui-col-xs4">
                 <span class="f40 mr5">15</span>年
-                <div class="f18">技术积累</div>
+                <div class="f18">技术沉淀</div>
             </div>
             <div class="layui-col-xs4">
-                <span class="f40 mr5">50</span>位
-                <div class="f18">行业经验</div>
+                <span class="f40 mr5">100+</span>位
+                <div class="f18">客户服务</div>
             </div>
             <div class="layui-col-xs4">
                 <span class="f40 mr5">100</span>家
@@ -193,73 +289,125 @@
         </div>
     </div>
 </div>
+
 <!--客户评价-->
-<div class="bg_f4">
-    <div class="layui-main pb50">
+<div class="bg_csto">
+    <div class="layui-container pb50">
         <div class="tc pt50 pb50 layui-anim layui-anim-scale">
-            <h3 class="mb10 f35 fw300">客户信赖</h3>
-            <p class="pt5 mb10 gray dis_table auto_ctr border_top_blue_2px">Customer</p>
+            <h3 class="mb10 f35 fw300">客户评价</h3>
+            <p class="pt5 mb10 gray dis_table auto border_top_blue_2px">Customer</p>
         </div>
-        <div class="layui-carousel pl100 pr100 auto_ctr bg_fff radius_2" id="customerVoice">
-            <div carousel-item>
-                <div>
-                    <div class="pa_mid">
-                        <div class="tc lh200">国家电投所做的工作让我非常肃然起敬，在中国来讲，瑞达恒是一个非常了不起的单位，尤其是他们总结出的这些全国性的数据，确实很了不起，做这个工作是非常有意义的。</div>
-                        <div class="tr pt15" style="line-height: 60px">
-                            <img src="../../assets/common/img/logo/ofg.jpg" class="circle w60 h60 border_ddd fl">
-                            <span class="fb f18"><span>——</span>中国能源建设股份有限公司</span>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="pa_mid">
-                        <div class="tc lh200">国家电投江西能源销售有限公司高效的执行力打动了我这个平时爱以执行力强而自居的人，加之专业的服务团队，极大的方便了业务的办理，这将是我们集团的长期合作伙伴。</div>
-                        <div class="tr pt15" style="line-height: 60px">
-                            <img src="../../assets/common/img/logo/ofg.jpg" class="circle w60 h60 border_ddd fl">
-                            <span class="fb f18"><span>——</span>中国能源建设股份有限公司</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--成功案例-->
-<div class="bg_code">
-    <div class="layui-main">
-        <div class="tc pt50 pb50 layui-anim layui-anim-scale">
-            <h3 class="mb10 f35 fw300 white">成功案例</h3>
-            <p class="pt5 mb10 gray dis_table auto_ctr border_top_blue_2px">Success</p>
-        </div>
-        <div id="successCase" class="success_case">
+        <div id="customer" class="customer">
             <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="assets/img/case/case01.png" class="w500 h300" /><p class="layui-elip pl10 pr10">什么时候什么时候的一张签约合影</p>
+                <div class="swiper-wrapper gray">
+                    <div class="swiper-slide p40 pointer">
+                        <div class="clearfix">
+                            <img class="circle w100 h100 fl mt30" src="../../assets/common/img/avatars/avatar0.jpg">
+                            <div class="fr w" style="margin-left: -120px">
+                                <div class="tj lh150" style="margin-left: 120px;">
+                                    <span class="f50 lgray">“</span>
+                                    <p>万创云以&nbsp;Docker&nbsp;为基础，改变了传统IT的开发运维模式，实现了真正意义上的&nbsp;DevOps、业务的快速部署伸缩、自助运维和持续集成。此外蜂巢容器云还提供了RDS、对象存储、负载均衡、Redis等高效易用的平台服务，稳定有效的支持了微服务项目，容器的集群模式也能够轻松应对业务的突发流量。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="tr"><span class="f18 darkblack">李明&nbsp;/&nbsp;</span><span>暴雪</span>&nbsp;<span>高级技术经理</span></p>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/case/case02.png" class="w500 h300" /><p class="layui-elip pl10 pr10">什么时候什么时候的一张签约合影</p>
+                    <div class="swiper-slide p40 pointer">
+                        <div class="clearfix">
+                            <img class="circle w100 h100 fl mt30" src="../../assets/common/img/avatars/avatar1.jpg">
+                            <div class="fr w" style="margin-left: -120px">
+                                <div class="tj lh150" style="margin-left: 120px;">
+                                    <span class="f50 lgray">“</span>
+                                    <p>万创云以&nbsp;Docker&nbsp;为基础，改变了传统IT的开发运维模式，实现了真正意义上的&nbsp;DevOps、业务的快速部署伸缩、自助运维和持续集成。此外蜂巢容器云还提供了RDS、对象存储、负载均衡、Redis等高效易用的平台服务，稳定有效的支持了微服务项目，容器的集群模式也能够轻松应对业务的突发流量。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="tr"><span class="f18 darkblack">李明&nbsp;/&nbsp;</span><span>暴雪</span>&nbsp;<span>高级技术经理</span></p>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/case/case01.png" class="w500 h300" /><p class="layui-elip pl10 pr10">什么时候什么时候的一张签约合影</p>
+                    <div class="swiper-slide p40 pointer">
+                        <div class="clearfix">
+                            <img class="circle w100 h100 fl mt30" src="../../assets/common/img/avatars/avatar2.jpg">
+                            <div class="fr w" style="margin-left: -120px">
+                                <div class="tj lh150" style="margin-left: 120px;">
+                                    <span class="f50 lgray">“</span>
+                                    <p>万创云以&nbsp;Docker&nbsp;为基础，改变了传统IT的开发运维模式，实现了真正意义上的&nbsp;DevOps、业务的快速部署伸缩、自助运维和持续集成。此外蜂巢容器云还提供了RDS、对象存储、负载均衡、Redis等高效易用的平台服务，稳定有效的支持了微服务项目，容器的集群模式也能够轻松应对业务的突发流量。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="tr"><span class="f18 darkblack">李明&nbsp;/&nbsp;</span><span>暴雪</span>&nbsp;<span>高级技术经理</span></p>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="assets/img/case/case02.png" class="w500 h300"/><p class="layui-elip pl10 pr10">什么时候什么时候的一张签约合影</p>
+                    <div class="swiper-slide p40 pointer">
+                        <div class="clearfix">
+                            <img class="circle w100 h100 fl mt30" src="../../assets/common/img/avatars/avatar3.jpg">
+                            <div class="fr w" style="margin-left: -120px">
+                                <div class="tj lh150" style="margin-left: 120px;">
+                                    <span class="f50 lgray">“</span>
+                                    <p>万创云以&nbsp;Docker&nbsp;为基础，改变了传统IT的开发运维模式，实现了真正意义上的&nbsp;DevOps、业务的快速部署伸缩、自助运维和持续集成。此外蜂巢容器云还提供了RDS、对象存储、负载均衡、Redis等高效易用的平台服务，稳定有效的支持了微服务项目，容器的集群模式也能够轻松应对业务的突发流量。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="tr"><span class="f18 darkblack">李明&nbsp;/&nbsp;</span><span>暴雪</span>&nbsp;<span>高级技术经理</span></p>
+                    </div>
+                    <div class="swiper-slide p40 pointer">
+                        <div class="clearfix">
+                            <img class="circle w100 h100 fl mt30" src="../../assets/common/img/avatars/avatar4.jpg">
+                            <div class="fr w" style="margin-left: -120px">
+                                <div class="tj lh150" style="margin-left: 120px;">
+                                    <span class="f50 lgray">“</span>
+                                    <p>万创云以&nbsp;Docker&nbsp;为基础，改变了传统IT的开发运维模式，实现了真正意义上的&nbsp;DevOps、业务的快速部署伸缩、自助运维和持续集成。此外蜂巢容器云还提供了RDS、对象存储、负载均衡、Redis等高效易用的平台服务，稳定有效的支持了微服务项目，容器的集群模式也能够轻松应对业务的突发流量。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="tr"><span class="f18 darkblack">李明&nbsp;/&nbsp;</span><span>暴雪</span>&nbsp;<span>高级技术经理</span></p>
+                    </div>
+                    <div class="swiper-slide p40 pointer">
+                        <div class="clearfix">
+                            <img class="circle w100 h100 fl mt30" src="../../assets/common/img/avatars/avatar5.jpg">
+                            <div class="fr w" style="margin-left: -120px">
+                                <div class="tj lh150" style="margin-left: 120px;">
+                                    <span class="f50 lgray">“</span>
+                                    <p>万创云以&nbsp;Docker&nbsp;为基础，改变了传统IT的开发运维模式，实现了真正意义上的&nbsp;DevOps、业务的快速部署伸缩、自助运维和持续集成。此外蜂巢容器云还提供了RDS、对象存储、负载均衡、Redis等高效易用的平台服务，稳定有效的支持了微服务项目，容器的集群模式也能够轻松应对业务的突发流量。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="tr"><span class="f18 darkblack">李明&nbsp;/&nbsp;</span><span>暴雪</span>&nbsp;<span>高级技术经理</span></p>
+                    </div>
+                    <div class="swiper-slide p40 pointer">
+                        <div class="clearfix">
+                            <img class="circle w100 h100 fl mt30" src="../../assets/common/img/avatars/avatar6.jpg">
+                            <div class="fr w" style="margin-left: -120px">
+                                <div class="tj lh150" style="margin-left: 120px;">
+                                    <span class="f50 lgray">“</span>
+                                    <p>万创云以&nbsp;Docker&nbsp;为基础，改变了传统IT的开发运维模式，实现了真正意义上的&nbsp;DevOps、业务的快速部署伸缩、自助运维和持续集成。此外蜂巢容器云还提供了RDS、对象存储、负载均衡、Redis等高效易用的平台服务，稳定有效的支持了微服务项目，容器的集群模式也能够轻松应对业务的突发流量。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="tr"><span class="f18 darkblack">李明&nbsp;/&nbsp;</span><span>暴雪</span>&nbsp;<span>高级技术经理</span></p>
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
     </div>
 </div>
+
+<!--成功案例-->
+<div class="bg_code">
+    <div class="layui-container">
+        <div class="tc pt50 pb50 white layui-anim layui-anim-scale">
+            <h3 class="mb10 f35 fw300">鼎力相助每一个梦想</h3>
+            <p>万创的客户遍及全国各地，各行各业，每一个梦想都将是我们不懈努力的源泉</p>
+        </div>
+    </div>
+</div>
+
 <!--合作伙伴-->
 <div class="bg_fff">
-    <div class="layui-main">
+    <div class="layui-container">
         <div class="tc pt50 pb50 layui-anim layui-anim-scale">
             <h3 class="mb10 f35 fw300">合作伙伴</h3>
-            <p class="pt5 mb10 gray dis_table auto_ctr border_top_blue_2px">Success</p>
+            <p class="pt5 mb10 gray dis_table auto border_top_blue_2px">Success</p>
         </div>
         <div id="partners" class="partners">
             <ul>
@@ -279,50 +427,24 @@
         </div>
     </div>
 </div>
+
 <!--页脚-->
 <div class="layui-bg-cyan">
-    <div class="layui-main pt50 pb50">
+    <div class="layui-container pt50 pb50">
         <div class="layui-row layui-col-space30 lgray">
             <div class="layui-col-xs6">
-                <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">关于我们<a href="about.html" class="fr lgray">了解详情</a></blockquote>
-                <p class=" lh200">
-                    <span class="fa fa-phone mr5 white" title="电话号码"></span><span class="mr10" title="电话号码">0791-83953621</span>
-                    <span class="fa fa-send ml10 mr5 white" title="企业邮箱"></span><span title="企业邮箱">3151511@spic.com</span>
-                </p>
-                <p class=" lh200">
-                    <span class="fa fa-fax mr5 white" title="传真号码"></span><span class="mr10" title="传真号码">0791-83953621</span>
-                    <span class="fa fa-map-marker ml10 mr5 white" title="企业地址"></span><span title="企业地址">江西省南昌市青山湖区艾溪湖北路66号</span>
-                </p>
-                <div class="mt30">
-                    <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">我们团队</blockquote>
-                    <ul class="group_list_xs">
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group1-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a></li>
-                    </ul>
-                </div>
+
             </div>
             <div class="layui-col-xs6">
-                <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">企业位置</blockquote>
-                <div id="mapContainer" class="h300"></div>
+
             </div>
         </div>
     </div>
 </div>
+
 <!--版权声明-->
 <div class="layui-bg-black">
-    <div class="layui-main pt10 pb10 tc lgray">
+    <div class="layui-container pt10 pb10 tc lgray">
         <p class="f14">2017 © 国电电投江西能源销售有限公司. ALL Rights Reserved</p>
     </div>
 </div>
@@ -330,7 +452,7 @@
 <script src="../../assets/common/js/jquery.min.js"></script>
 <script src="../../assets/common/layui/layui.js"></script>
 <script src="../../assets/common/js/common.js"></script>
-
+<!--lib-->
 <script src="../../assets/lib/swiper/swiper.min.js"></script>
 <script src="../../assets/lib/kxbdmarquee/jquery.kxbdmarquee.js"></script>
 <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
@@ -339,11 +461,9 @@
 <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <script>
-
     layui.config({
         base: 'assets/js/' //你存放新模块的目录，注意，不是layui的模块目录
     }).use('index'); //加载页面模块入口
-
     /*初始化无缝滚动*/
     $("#partners").kxbdMarquee({
         direction:"left",
