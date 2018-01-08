@@ -2,556 +2,287 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>国家电投江西能源销售有限公司</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="贵州万创宏达科技有限责任公司、科技、网络、智慧、家校互动、营养餐系统">
+    <meta name="keywords" content="万创宏达科科技_网站建设_网页制作_网络公司_微信公众号_流媒体_微信小程序开发_家校互动_智慧校园_营养餐系统">
+    <title>贵州万创宏达科技有限责任公司</title>
     <link rel="stylesheet" href="../../assets/common/layui/css/layui.css">
     <link rel="stylesheet" href="../../assets/common/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--共有base层-->
     <link rel="stylesheet" href="../../assets/common/css/base.css">
+    <!--共有common层-->
     <link rel="stylesheet" href="../../assets/common/css/common.css">
     <style>
-         /*tab标题*/
-        .layui-news > .layui-tab-title {
-            text-align: center;
-            margin-top: 30px
-        }
-
-        .layui-news > .layui-tab-title li {
-            color: gray;
-            font-size: 16px;
-        }
-
-        .layui-news > .layui-tab-title li.layui-this {
-            color: #636363;
-        }
-
-        .layui-news > .layui-tab-title .layui-this:after {
-            border: 0;
-            border-bottom: 3px solid #234;
-        }
-        /*tab内容*/
-        .news-item-list li{display: inline-block;vertical-align: middle; *display: inline; *zoom:1;}
-        .news-item-list li>div:hover{box-shadow: 0 0 50px #ddd;}
-        .news-item-img{position:relative;display:block;}
-        .news-item-img img{width:100%;height:180px;}
-        .news-item-img i{position:absolute;width:100px;height:100px;-webkit-border-radius:50%;-moz-border-radius:50%;-o-border-radius:50%;-ms-border-radius:50%;border-radius:50%;background:rgba(0,0,0,.2);top:40px;left:50%;margin-left:-50px;color:#fff;font-size:24px;text-align:center;line-height:100px;opacity:0;-webkit-transition:all .3s;-moz-transition:all .3s;-ms-transition:all .3s;-o-transition:all .3s;transition:all .3s;}
-        .news-item-img:hover i{opacity:1;width:60px;height:60px;line-height:60px;margin-left:-30px;top:60px;}
-        .news-item-list li h2{padding: 10px 0 5px;line-height:22px;font-size:18px;text-align:center;height:24px;}
-        .news-item-list li h2 a:hover{color:#60B878;}
-        .news-item-desc{height:40px; line-height: 20px;font-size:12px; color:#666;overflow:hidden;}
-        .news-item-info{position:relative;margin:10px 0 0;padding-top:10px;border-top: 1px dotted #eee;}
-        .news-item-info p{height:24px; line-height:24px;}
-        .news-item-info p span{height:24px; line-height:24px;color:#666;font-size: 14px;}
-        .news-item-info p i{color:#666;}
-        .news-item-info .layui-elip span.pub_time{float:right;font-size: 14px}
+        .layui-badge{height: 18px; line-height: 18px; padding: 0 5px;
+            font-size: 12px; border: 1px solid #FF5722; background: none; color: #FF5722;}
+        .mark_author{position: absolute;bottom: 15px;}
+        .mark_view{position: absolute;bottom: 15px;right: 15px}
     </style>
 </head>
 <body class="bg_f4">
+
 <!--顶部导航-->
-<div class="layui-fluid layui-bg-black layui-header">
-    <div class="layui-main">
-        <a class="logo" href="../index/index.html">
-            <img src="../../assets/common/img/logo.png" alt="layui">
-        </a>
-        <!--未登录-->
-        <div class="">
-            <ul class="layui-nav layui-layout-right tr" style="right: 210px" lay-filter="">
-                <li class="layui-nav-item layui-this"><a href="../index/index.html">首页</a></li>
-                <li class="layui-nav-item"><a href="">合作意向</a></li>
-                <li class="layui-nav-item">
-                    <a href="">政策行业动态</a>
-                    <dl class="layui-nav-child tc">
-                        <dd><a href="">政策动态</a></dd>
-                        <dd><a href="">行业动态</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item"><a href="">资料下载</a></li>
-                <li class="layui-nav-item"><a href="javascript:;">资料中心</a></li>
-                <li class="layui-nav-item"><a href="">关于我们</a></li>
-            </ul>
-            <div class="layui-btn-group layui-layout-right" style="top: 11px">
-                <a href="../login/login.html" class="layui-btn">登录</a>
-                <a href="../login/reg.html" class="layui-btn layui-btn-normal">注册</a>
-                <a href="" class="layui-btn layui-btn-danger">管理员</a>
-            </div>
-        </div>
-        <!--已登陆-->
-        <div class="layui-hide">
-            <ul class="layui-nav layui-layout-right tr" style="right: 85px" lay-filter="">
-                <li class="layui-nav-item layui-this"><a href="">首页</a></li>
-                <li class="layui-nav-item"><a href="">合作意向</a></li>
-                <li class="layui-nav-item">
-                    <a href="">政策行业动态</a>
-                    <dl class="layui-nav-child tc">
-                        <dd><a href="">政策动态</a></dd>
-                        <dd><a href="">行业动态</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item"><a href="">资料下载</a></li>
-                <li class="layui-nav-item"><a href="">关于我们</a></li>
-                <li class="layui-nav-item layui-hide"><a href="">客户中心</a></li>
-                <li class="layui-nav-item ">
-                    <a href="javascript:;"><img src="../../assets/common/img/avatars/avatar0.jpg"
-                                                class="layui-nav-img">江铜集团</a>
-                    <dl class="layui-nav-child tc">
-                        <dd><a href="javascript:;">客户中心</a></dd>
-                        <dd><a href="javascript:;">安全退出</a></dd>
-                    </dl>
-                </li>
-            </ul>
-            <a href="" class="layui-btn layui-btn-danger layui-layout-right" style="top: 11px">管理员</a>
-        </div>
+<div class="layui-fluid">
+    <div class="layui-row top-nav">
+        <div class="logo fl"><a href="../index/index.html" class="block w h">万创宏达</a></div>
+        <i class="layui-icon btn open mob">&#xe65f;</i>
+        <i class="layui-icon btn close none">&#xe671;</i>
+        <ul class="layui-nav fr pc">
+            <li class="layui-nav-item layui-this"><a href="../index/index.html">网站首页</a></li>
+            <li class="layui-nav-item "><a href="">业务范围</a></li>
+            <li class="layui-nav-item ">
+                <a href="">产品介绍</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">校园安防系统</a></dd>
+                    <dd><a href="">家校互动系统</a></dd>
+                    <dd><a href="">教务管理系统</a></dd>
+                    <dd><a href="">营养改善管理系统</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item ">
+                <a href="cases.html">成功案例</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">企业门户</a></dd>
+                    <dd><a href="">OA办公自动化系统</a></dd>
+                    <dd><a href="">CRM客户关系管理系统</a></dd>
+                    <dd><a href="">营养改善管理系统</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item "><a href="">关于万创</a></li>
+            <li class="layui-nav-item "><a href="">联系万创</a></li>
+        </ul>
+        <!--<ul class="layui-nav fr">
+            <li class="layui-nav-item top-user"><i class="fa fa-user-circle-o f25 mr5 vm"></i>管理员</li>
+        </ul>-->
     </div>
 </div>
 
 <!--页面标题背景-->
-<div class="top-title tc" style="background: url('../../assets/common/img/top_banner.jpg') no-repeat center;">
-    <h1 class="layui-anim layui-anim-scale">新闻动态</h1>
-    <br><br>
-    <a href="javascript:;" id="onlineChatBtn" class="layui-btn layui-btn-big layui-anim layui-anim-scale">在线客服</a>
-    <a href="tel:0791-86877768" class="layui-btn layui-btn-primary layui-btn-big layui-anim layui-anim-scale" style="background:none;color:#fff;">0791-86877768</a>
+<div class="caption tc" style="background: url('../../assets/common/img/top_banner.jpg') no-repeat center;">
+    <h1 class="layui-anim layui-anim-scale">新闻公告</h1>
+    <div class="mt15">
+        <a href="javascript:;" id="onlineChatBtn" class="layui-btn layui-btn-big layui-anim layui-anim-scale">在线客服</a>
+        <a href="tel:0791-86877768" class="layui-btn layui-btn-primary layui-btn-big layui-anim layui-anim-scale" style="background:none;color:#fff;">0791-86877768</a>
+    </div>
 </div>
 
-<div class="layui-tab layui-tab-brief layui-news">
-    <ul class="layui-tab-title">
-        <li class="layui-this">政策动态</li>
-        <li>行业动态</li>
-        <li>公司新闻</li>
-    </ul>
-    <div class="layui-tab-content">
-        <div class="layui-tab-item layui-show">
-            <ul id="policyCon" class="layui-main layui-row news-item-list">
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="news_detail.html" target="_blank">
-                            <img alt="" src="assets/img/policy/policy1_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="news_detail.html" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
+<!--新闻列表-->
+<div class="pt50 pb50">
+    <div class="layui-container">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md9">
+                <ul class="">
+                    <li class="layui-row bg_fff p15 radius_2 mb5 pr over_hide">
+                        <div class="layui-col-md4 p0 over_hide">
+                            <a href="news_detail.html" class="img-hover">
+                                <img class="w" src="http://tinywan-oss.oss-cn-shanghai.aliyuncs.com//uploads/article/thumb_5a3934289d9f.png" alt="">
+                            </a>
                         </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy2_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
+                        <div class="layui-col-md8 ps pl15">
+                            <h2>
+                                <span class="layui-badge">新闻动态</span>
+                                <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
+                            </h2>
+                            <div class="mt15">
+                                <p class="layui-text">
+                                    今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
+                                </p>
+                                <a href="javascript:;" class="gray mark_author">
+                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
+                                    <span class="layui-badge layui-bg-red">管理员</span>
+                                </a>
+                                <div class="gray mark_view">
+                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
+                                    <span class="" title="阅读次数"><i class="fa fa-eye mr5 blue"></i>41</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy3_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
+                    </li>
+                    <li class="layui-row bg_fff p15 radius_2 mb5 pr over_hide">
+                        <div class="layui-col-md4 p0 over_hide">
+                            <a href="news_detail.html" class="img-hover">
+                                <img class="w" src="http://tinywan-oss.oss-cn-shanghai.aliyuncs.com//uploads/article/thumb_5a3934289d9f.png" alt="">
+                            </a>
                         </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy4_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
+                        <div class="layui-col-md8 ps pl15">
+                            <h2>
+                                <span class="layui-badge">通知公告</span>
+                                <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
+                            </h2>
+                            <div class="mt15">
+                                <p class="layui-text">
+                                    今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
+                                </p>
+                                <a href="javascript:;" class="gray mark_author">
+                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
+                                    <span class="layui-badge layui-bg-red">管理员</span>
+                                </a>
+                                <div class="gray mark_view">
+                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
+                                    <span class="" title="阅读次数"><i class="fa fa-eye mr5 blue"></i>41</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy5_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
+                    </li>
+                    <li class="layui-row bg_fff p15 radius_2 mb5 pr over_hide">
+                        <div class="layui-col-md4 p0 over_hide">
+                            <a href="news_detail.html" class="img-hover">
+                                <img class="w" src="http://tinywan-oss.oss-cn-shanghai.aliyuncs.com//uploads/article/thumb_5a3934289d9f.png" alt="">
+                            </a>
                         </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy6_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
+                        <div class="layui-col-md8 ps pl15">
+                            <h2>
+                                <span class="layui-badge">新闻动态</span>
+                                <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
+                            </h2>
+                            <div class="mt15">
+                                <p class="layui-text">
+                                    今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
+                                </p>
+                                <a href="javascript:;" class="gray mark_author">
+                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
+                                    <span class="layui-badge layui-bg-red">管理员</span>
+                                </a>
+                                <div class="gray mark_view">
+                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
+                                    <span class="" title="阅读次数"><i class="fa fa-eye mr5 blue"></i>41</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy7_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
+                    </li>
+                    <li class="layui-row bg_fff p15 radius_2 mb5 pr over_hide">
+                        <div class="layui-col-md4 p0 over_hide">
+                            <a href="news_detail.html" class="img-hover">
+                                <img class="w" src="http://tinywan-oss.oss-cn-shanghai.aliyuncs.com//uploads/article/thumb_5a3934289d9f.png" alt="">
+                            </a>
                         </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy8_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
+                        <div class="layui-col-md8 ps pl15">
+                            <h2>
+                                <span class="layui-badge">通知公告</span>
+                                <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
+                            </h2>
+                            <div class="mt15">
+                                <p class="layui-text">
+                                    今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
+                                </p>
+                                <a href="javascript:;" class="gray mark_author">
+                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
+                                    <span class="layui-badge layui-bg-red">管理员</span>
+                                </a>
+                                <div class="gray mark_view">
+                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
+                                    <span class="" title="阅读次数"><i class="fa fa-eye mr5 blue"></i>41</span>
+                                </div>
+                            </div>
                         </div>
+                    </li>
+                    <li class="layui-row bg_fff p15 radius_2 mb5 pr over_hide">
+                        <div class="layui-col-md4 p0 over_hide">
+                            <a href="news_detail.html" class="img-hover">
+                                <img class="w" src="http://tinywan-oss.oss-cn-shanghai.aliyuncs.com//uploads/article/thumb_5a3934289d9f.png" alt="">
+                            </a>
+                        </div>
+                        <div class="layui-col-md8 ps pl15">
+                            <h2>
+                                <span class="layui-badge">新闻动态</span>
+                                <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
+                            </h2>
+                            <div class="mt15">
+                                <p class="layui-text">
+                                    今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
+                                </p>
+                                <a href="javascript:;" class="gray mark_author">
+                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
+                                    <span class="layui-badge layui-bg-red">管理员</span>
+                                </a>
+                                <div class="gray mark_view">
+                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
+                                    <span class="" title="阅读次数"><i class="fa fa-eye mr5 blue"></i>41</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layui-row bg_fff p15 radius_2 mb5 pr over_hide">
+                        <div class="layui-col-md4 p0 over_hide">
+                            <a href="news_detail.html" class="img-hover">
+                                <img class="w" src="http://tinywan-oss.oss-cn-shanghai.aliyuncs.com//uploads/article/thumb_5a3934289d9f.png" alt="">
+                            </a>
+                        </div>
+                        <div class="layui-col-md8 ps pl15">
+                            <h2>
+                                <span class="layui-badge">通知公告</span>
+                                <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
+                            </h2>
+                            <div class="mt15">
+                                <p class="layui-text">
+                                    今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
+                                </p>
+                                <a href="javascript:;" class="gray mark_author">
+                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
+                                    <span class="layui-badge layui-bg-red">管理员</span>
+                                </a>
+                                <div class="gray mark_view">
+                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
+                                    <span class="" title="阅读次数"><i class="fa fa-eye mr5 blue"></i>41</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="tc mt30">
+                    <a href="javascript:;" class="load_more">加载更多</a>
+                </div>
+            </div>
+            <div class="layui-col-md3">
+                <div class="bg_fff radius_2 p15">
+                    <div class="pb15"><span class="layui-icon blue">&#xe600;</span><span class="fr">案例说明</span></div>
+                    <hr class="layui-bg-gray mt0">
+                    <div class="lh180 tj">
+                        皇朝雅饰装潢有限公司是以装饰设计、装饰施工以及智能家居工程为一体的大型综合性装饰企业，并定期对施工人员进行生产技术、安全施工培训。皇朝雅饰装潢有限公司设有行政管理部、办公室、平面策划部、工程部、质检部、市场服务部、财务部、售后服务部等，各部分工明确，责任到人，确保到装饰公司的客户全程及售后无忧。
                     </div>
-                </li>
-            </ul>
+                </div>
+                <div class="bg_fff radius_2 p15 mt15">
+                    <div class="pb15"><span class="layui-icon blue">&#xe606;</span><span class="fr">后期服务</span></div>
+                    <hr class="layui-bg-gray mt0">
+                    <div class="lh180 tj">
+                        <img src="../../assets/common/img/avatars/avatar3.jpg" class="circle w60 h60">
+                        <span class="ml10">张倪静</span>
+                        <a class="layui-btn layui-btn-normal fr" style="margin-top: 11px">联系Ta</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="layui-tab-item">
-            <ul id="policyCon0" class="layui-main layui-row news-item-list">
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="news_detail.html" target="_blank">
-                            <img alt="" src="assets/img/policy/policy1_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="news_detail.html" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy2_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy3_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy4_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy5_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy6_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy7_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-                <li class="layui-col-xs3">
-                    <div class="m10 p10 bg_fff">
-                        <a class="news-item-img" href="" target="_blank">
-                            <img alt="" src="assets/img/policy/policy8_img1.jpg">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <h2 class="layui-elip">
-                            <a href="" target="_blank">江西省发展改革委关于规范热电联产、资源综合利用等发电项目上网电价管理的通知</a>
-                        </h2>
-                        <p class="news-item-desc">
-                            各设区市、省直管试点县（市）发展改革委、物价局，国网江西省电力公司：根据《中共江西省委、江西省人民政府关于加快推进价格机制改革的实施意见》（赣发[2016]17号）精神，为建立公开、透明的定价规则
-                        </p>
-                        <div class="news-item-info">
-                            <p class="layui-elip">
-                                <i class="fa fa-eye"></i>
-                                <span>286</span>
-                                <span class="pub_time">2017-12-06</span>
-                            </p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="layui-tab-item">3</div>
     </div>
 </div>
 
 <!--页脚-->
 <div class="layui-bg-cyan">
-    <div class="layui-main pt50 pb50">
+    <div class="layui-container pt50 pb50">
         <div class="layui-row layui-col-space30 lgray">
             <div class="layui-col-xs6">
-                <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">关于我们<a href="about.html"
-                                                                                       class="fr lgray">了解详情</a>
-                </blockquote>
-                <p class=" lh200">
-                    <span class="fa fa-phone mr5 white" title="电话号码"></span><span class="mr10" title="电话号码">0791-83953621</span>
-                    <span class="fa fa-send ml10 mr5 white" title="企业邮箱"></span><span
-                        title="企业邮箱">3151511@spic.com</span>
-                </p>
-                <p class=" lh200">
-                    <span class="fa fa-fax mr5 white" title="传真号码"></span><span class="mr10"
-                                                                                title="传真号码">0791-83953621</span>
-                    <span class="fa fa-map-marker ml10 mr5 white" title="企业地址"></span><span title="企业地址">江西省南昌市青山湖区艾溪湖北路66号</span>
-                </p>
-                <p class="f14 lh200">创新创造是我们的特质。国家电投倡导全面创新创造，将创新融入技术、产品、制度、组织、文化、观念等方方面面；倡导全员创新创造，使创新创造成为国家电投人的品格。
-                </p>
-                <div class="mt30">
-                    <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">我们团队</blockquote>
-                    <ul class="group_list_xs">
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group1-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                    </ul>
-                </div>
+
             </div>
             <div class="layui-col-xs6">
-                <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">企业位置</blockquote>
-                <div id="mapContainer" class="h300"></div>
             </div>
         </div>
     </div>
 </div>
+
 <!--版权声明-->
 <div class="layui-bg-black">
-    <div class="layui-main pt10 pb10 tc lgray">
-        <p class="f14">2017 © 国电电投江西能源销售有限公司. ALL Rights Reserved</p>
+    <div class="pt10 pb10 tc lgray">
+        <p class="f14">2018 © 贵州万创宏达科技有限责任公司</p>
     </div>
 </div>
 
 <script src="../../assets/common/js/jquery.min.js"></script>
 <script src="../../assets/common/layui/layui.js"></script>
-<script src="http://api.map.baidu.com/api?v=2.0&ak=6ZTPFF2XmLknls8ByATGmZjD7G15gkvI"></script>
-<script src="../../assets/lib/baiduMap/jquery.baiduMap.min.js" type="text/javascript"></script>
+<script src="../../assets/common/js/common.js"></script>
 <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
 <!--[if lt IE 9]>
 <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
 <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<script>
-    layui.extend({
-        common: '{/}../../assets/common/js/common' // {/}的意思即代表采用自有路径，即不跟随 base 路径
-    }).use('common');
-
-    layui.config({
-        base: 'assets/js/' //你存放新模块的目录，注意，不是layui的模块目录
-    }).use('news'); //加载入口
-</script>
-
 </body>
 </html>

@@ -42,7 +42,8 @@
     }
 }
 
-
+/*分页*/
+.load_more{padding: 10px 20px;border: 1px solid #009E94;font-size: 14px;}
 
 /*页面banner标题*/
 .caption{
@@ -82,7 +83,6 @@
     -webkit-transition: all 1s ease 0s;
     transition: all 1s ease 0s;
 }
-
 .img-hover:hover img {
     -moz-transform: scale(1.1, 1.1);
     -ms-transform: scale(1.1, 1.1);
@@ -95,6 +95,7 @@
 .shadow{
     box-shadow: 0 0 50px #ddd;
 }
+
 /*页脚底部团队小照片组*/
 .group_list_xs li{
     float: left;

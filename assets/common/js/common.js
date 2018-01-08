@@ -280,7 +280,7 @@ function LC_function() {
     util.fixbar({
         bar1: true
         , bar2: true
-        , css: {right: 50, bottom: 100}
+        , css: {right: 30, bottom: 100}
         , bgcolor: '#393D49'
         , click: function (type) {
             if (type === 'bar1') {
