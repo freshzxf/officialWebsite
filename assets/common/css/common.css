@@ -1,3 +1,9 @@
+
+/*替换框架自带样式*/
+.layui-btn-primary:hover{border-color: #1E9FFF}
+.layui-breadcrumb a:hover{color: #1E9FFF!important;}
+.layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after{height:2px;background-color: #1E9FFF;}
+
 /*导航栏logo*/
 .top-nav {
     position: fixed;
@@ -28,6 +34,10 @@
 .top-user{
     height: 60px;
 }
+/*分页*/
+.load_more{padding: 10px 20px;border: 1px solid #1E9FFF;font-size: 14px;}
+.load_more:hover{color: #1E9FFF;}
+/*响应式显示隐藏页面结构*/
 @media screen and (max-device-width: 1000px) {
     .pc {
         display:none;
@@ -36,14 +46,7 @@
     .mob {
         display: block;
     }
-
-    header {
-        height: auto;
-    }
 }
-
-/*分页*/
-.load_more{padding: 10px 20px;border: 1px solid #009E94;font-size: 14px;}
 
 /*页面banner标题*/
 .caption{
@@ -107,13 +110,4 @@
 /*隐藏百度地图版权标志*/
 .anchorBL{display:none;}
 
-/*响应式显示隐藏页面结构*/
-@media screen and (max-device-width: 1000px) {
-    .pc {
-        display:none;
-    }
 
-    .mob {
-        display: block;
-    }
-}

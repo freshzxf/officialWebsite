@@ -14,8 +14,9 @@
     <!--共有common层-->
     <link rel="stylesheet" href="../../assets/common/css/common.css">
     <style>
-        .layui-badge{height: 18px; line-height: 18px; padding: 0 5px;
-            font-size: 12px; border: 1px solid #FF5722; background: none; color: #FF5722;}
+        .layui-badge.badge-news,.layui-badge.badge-notice{height: 18px; line-height: 18px; padding: 0 5px;font-size: 12px;background: none;}
+        .layui-badge.badge-news{color: #5FB878;border: 1px solid #5FB878}
+        .layui-badge.badge-notice{color: #FF5722;border: 1px solid #FF5722;}
         .mark_author{position: absolute;bottom: 15px;}
         .mark_view{position: absolute;bottom: 15px;right: 15px}
     </style>
@@ -41,7 +42,7 @@
                 </dl>
             </li>
             <li class="layui-nav-item ">
-                <a href="cases.html">成功案例</a>
+                <a href="../cases/cases.html">成功案例</a>
                 <dl class="layui-nav-child">
                     <dd><a href="">企业门户</a></dd>
                     <dd><a href="">OA办公自动化系统</a></dd>
@@ -62,8 +63,8 @@
 <div class="caption tc" style="background: url('../../assets/common/img/top_banner.jpg') no-repeat center;">
     <h1 class="layui-anim layui-anim-scale">新闻公告</h1>
     <div class="mt15">
-        <a href="javascript:;" id="onlineChatBtn" class="layui-btn layui-btn-big layui-anim layui-anim-scale">在线客服</a>
-        <a href="tel:0791-86877768" class="layui-btn layui-btn-primary layui-btn-big layui-anim layui-anim-scale" style="background:none;color:#fff;">0791-86877768</a>
+        <a href="javascript:;" id="onlineChatBtn" class="layui-btn layui-btn-normal layui-anim layui-anim-scale">在线客服</a>
+        <a href="tel:0791-86877768" class="layui-btn layui-btn-primary bg_none white layui-anim layui-anim-scale">0791-86877768</a>
     </div>
 </div>
 
@@ -81,7 +82,7 @@
                         </div>
                         <div class="layui-col-md8 ps pl15">
                             <h2>
-                                <span class="layui-badge">新闻动态</span>
+                                <span class="layui-badge badge-news">新闻动态</span>
                                 <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
                             </h2>
                             <div class="mt15">
@@ -89,8 +90,8 @@
                                     今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
                                 </p>
                                 <a href="javascript:;" class="gray mark_author">
-                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
-                                    <span class="layui-badge layui-bg-red">管理员</span>
+                                    <cite class="mr10">Admin</cite>
+                                    <span class="layui-badge layui-bg-blue">管理员</span>
                                 </a>
                                 <div class="gray mark_view">
                                     <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
@@ -107,7 +108,7 @@
                         </div>
                         <div class="layui-col-md8 ps pl15">
                             <h2>
-                                <span class="layui-badge">通知公告</span>
+                                <span class="layui-badge badge-notice">通知公告</span>
                                 <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
                             </h2>
                             <div class="mt15">
@@ -115,8 +116,34 @@
                                     今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
                                 </p>
                                 <a href="javascript:;" class="gray mark_author">
-                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
-                                    <span class="layui-badge layui-bg-red">管理员</span>
+                                    <cite class="mr10">Admin</cite>
+                                    <span class="layui-badge layui-bg-blue">管理员</span>
+                                </a>
+                                <div class="gray mark_view">
+                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>2018-01-06</span>
+                                    <span class="" title="阅读次数"><i class="fa fa-eye mr5 blue"></i>41</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layui-row bg_fff p15 radius_2 mb5 pr over_hide">
+                        <div class="layui-col-md4 p0 over_hide">
+                            <a href="news_detail.html" class="img-hover">
+                                <img class="w" src="http://tinywan-oss.oss-cn-shanghai.aliyuncs.com//uploads/article/thumb_5a3934289d9f.png" alt="">
+                            </a>
+                        </div>
+                        <div class="layui-col-md8 ps pl15">
+                            <h2>
+                                <span class="layui-badge badge-news">新闻动态</span>
+                                <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
+                            </h2>
+                            <div class="mt15">
+                                <p class="layui-text mb30">
+                                    今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
+                                </p>
+                                <a href="javascript:;" class="gray mark_author">
+                                    <cite class="mr10">Admin</cite>
+                                    <span class="layui-badge layui-bg-blue">管理员</span>
                                 </a>
                                 <div class="gray mark_view">
                                     <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
@@ -133,7 +160,7 @@
                         </div>
                         <div class="layui-col-md8 ps pl15">
                             <h2>
-                                <span class="layui-badge">新闻动态</span>
+                                <span class="layui-badge badge-notice">通知公告</span>
                                 <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
                             </h2>
                             <div class="mt15">
@@ -141,8 +168,34 @@
                                     今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
                                 </p>
                                 <a href="javascript:;" class="gray mark_author">
-                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
-                                    <span class="layui-badge layui-bg-red">管理员</span>
+                                    <cite class="mr10">Admin</cite>
+                                    <span class="layui-badge layui-bg-blue">管理员</span>
+                                </a>
+                                <div class="gray mark_view">
+                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>2018-01-06</span>
+                                    <span class="" title="阅读次数"><i class="fa fa-eye mr5 blue"></i>41</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layui-row bg_fff p15 radius_2 mb5 pr over_hide">
+                        <div class="layui-col-md4 p0 over_hide">
+                            <a href="news_detail.html" class="img-hover">
+                                <img class="w" src="http://tinywan-oss.oss-cn-shanghai.aliyuncs.com//uploads/article/thumb_5a3934289d9f.png" alt="">
+                            </a>
+                        </div>
+                        <div class="layui-col-md8 ps pl15">
+                            <h2>
+                                <span class="layui-badge badge-news">新闻动态</span>
+                                <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
+                            </h2>
+                            <div class="mt15">
+                                <p class="layui-text mb30">
+                                    今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
+                                </p>
+                                <a href="javascript:;" class="gray mark_author">
+                                    <cite class="mr10">Admin</cite>
+                                    <span class="layui-badge layui-bg-blue">管理员</span>
                                 </a>
                                 <div class="gray mark_view">
                                     <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
@@ -159,7 +212,7 @@
                         </div>
                         <div class="layui-col-md8 ps pl15">
                             <h2>
-                                <span class="layui-badge">通知公告</span>
+                                <span class="layui-badge badge-notice">通知公告</span>
                                 <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
                             </h2>
                             <div class="mt15">
@@ -167,63 +220,11 @@
                                     今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
                                 </p>
                                 <a href="javascript:;" class="gray mark_author">
-                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
-                                    <span class="layui-badge layui-bg-red">管理员</span>
+                                    <cite class="mr10">Admin</cite>
+                                    <span class="layui-badge layui-bg-blue">管理员</span>
                                 </a>
                                 <div class="gray mark_view">
-                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
-                                    <span class="" title="阅读次数"><i class="fa fa-eye mr5 blue"></i>41</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="layui-row bg_fff p15 radius_2 mb5 pr over_hide">
-                        <div class="layui-col-md4 p0 over_hide">
-                            <a href="news_detail.html" class="img-hover">
-                                <img class="w" src="http://tinywan-oss.oss-cn-shanghai.aliyuncs.com//uploads/article/thumb_5a3934289d9f.png" alt="">
-                            </a>
-                        </div>
-                        <div class="layui-col-md8 ps pl15">
-                            <h2>
-                                <span class="layui-badge">新闻动态</span>
-                                <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
-                            </h2>
-                            <div class="mt15">
-                                <p class="layui-text mb30">
-                                    今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
-                                </p>
-                                <a href="javascript:;" class="gray mark_author">
-                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
-                                    <span class="layui-badge layui-bg-red">管理员</span>
-                                </a>
-                                <div class="gray mark_view">
-                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
-                                    <span class="" title="阅读次数"><i class="fa fa-eye mr5 blue"></i>41</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="layui-row bg_fff p15 radius_2 mb5 pr over_hide">
-                        <div class="layui-col-md4 p0 over_hide">
-                            <a href="news_detail.html" class="img-hover">
-                                <img class="w" src="http://tinywan-oss.oss-cn-shanghai.aliyuncs.com//uploads/article/thumb_5a3934289d9f.png" alt="">
-                            </a>
-                        </div>
-                        <div class="layui-col-md8 ps pl15">
-                            <h2>
-                                <span class="layui-badge">通知公告</span>
-                                <a href="news_detail.html" class="f18 ">git如何同时同步提交到码云和GitHub上</a>
-                            </h2>
-                            <div class="mt15">
-                                <p class="layui-text mb30">
-                                    今天github push代码一直push不上去，打算就备份一份代码带国内开源码云上。  Github容易出现的情况是:  国内访问速度比较慢， 如果被墙掉的话，就直接没发使用了 如果开源个PHP的项目，想把扩展文件目录vender一并上传...
-                                </p>
-                                <a href="javascript:;" class="gray mark_author">
-                                    <cite class="mr10"><i class="fa fa-user-o mr5 blue"></i>Admin</cite>
-                                    <span class="layui-badge layui-bg-red">管理员</span>
-                                </a>
-                                <div class="gray mark_view">
-                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>10小时前</span>
+                                    <span class="mr10"><i class="fa fa-send-o mr5 blue"></i>2018-01-06</span>
                                     <span class="" title="阅读次数"><i class="fa fa-eye mr5 blue"></i>41</span>
                                 </div>
                             </div>
