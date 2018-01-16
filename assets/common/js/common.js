@@ -17,27 +17,11 @@ function windowOpen(url, name, iWidth, iHeight) {
 var win_width = $(window).width();
 var win_height = $(window).height();
 var lay;
-layui.config({
-    base: '../../assets/common/layui/lay/extendModules/' //设定扩展的Layui模块的所在目录，一般用于外部模块扩展
-});
 if (typeof ajaxlayui === 'undefined') {
-    /*加载pjax文件，只加载一次*/
-    var ajaxlayui = true;
-    layui.extend({
-        pjax: 'pjax'
-    });
-    layui.use(['pjax', 'layer', 'flow', 'util', 'carousel', 'layedit'], function () {
+    layui.use(['layer', 'flow', 'util', 'carousel', 'layedit'], function () {
         lay = layui;
         util = lay.util;
-        lay.pjax.on('change', function (isInitialLoad) {
-            if (isInitialLoad === false) {
-                /*兼容百度统计*/
-                if (typeof _hmt !== 'undefined')
-                    _hmt.push(['_trackPageview', location.pathname + location.search]);
-            };
-            LC_function();
-        });
-        lay.pjax.init(50);
+        LC_function();
     });
 };
 
@@ -60,21 +44,6 @@ var _ajax = function (url, type, datatype, data, cb) {
 };
 
 function LC_function() {
-
-    /*首页ajax翻页*/
-    if ($('.ajax_page').length > 0) {
-        var ajax_page = function () {
-            var page = $('.ajax_page').attr('data-page');
-            $('.ajax_page').on('click', function () {
-                $('.ajax_page').html('加载中...');
-                _ajax('/index.php?ajax=1&page=' + page, '', '', '', function (res) {
-                    $('.pager').after(res).remove(); //在类名为pager的DOM结构之后插入返回值，然后删除自身
-                    ajax_page(); //递归调用
-                });
-            });
-        };
-        ajax_page(); //首次执行
-    };
 
     /*页面loading*/
     lay.layer.load(0, {
