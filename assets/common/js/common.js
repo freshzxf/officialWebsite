@@ -63,7 +63,6 @@ function LC_function() {
         });
     };
 
-
     /*推荐文章轮播加载*/
     if ($('.comlist').length > 0) {
         var lunbo_comlist = lay.carousel.render({
@@ -253,7 +252,7 @@ function LC_function() {
         , bgcolor: '#393D49'
         , click: function (type) {
             if (type === 'bar1') {
-                openwindow('http://p.qiao.baidu.com/cps/chat?siteId=11555035&userId=22742801', '', '585', '540')
+                windowOpen('http://p.qiao.baidu.com/cps/chat?siteId=11555035&userId=22742801', '', '585', '540')
             } else if (type === 'bar2') {
                 window.open('../help/help_hall.html')
             } else if (type === 'top') {

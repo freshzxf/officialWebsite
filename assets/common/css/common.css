@@ -2,8 +2,8 @@
 /*替换框架自带样式*/
 .layui-btn-primary:hover{border-color: #1E9FFF}
 .layui-breadcrumb a:hover{color: #1E9FFF!important;}
-.layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after{height:2px;background-color: #1E9FFF;}
-
+.layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after{background-color: #1E9FFF;}
+.layui-fixbar li{ background-color: #83c7ff !important;}
 /*导航栏logo*/
 .top-nav {
     position: fixed;
@@ -42,7 +42,6 @@
     .pc {
         display:none;
     }
-
     .mob {
         display: block;
     }
@@ -70,6 +69,9 @@
 }
 .border_top_black_2px {
     border-top: 2px solid #1c2734;
+}
+.border_top_grey{
+    border-top: 1px solid #888;
 }
 .border_ddd{
     border: 1px solid #ddd;
