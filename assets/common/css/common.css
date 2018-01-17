@@ -99,6 +99,53 @@
     transform: scale(1.1, 1.1);
 }
 
+/*动画背景图*/
+.moving-bg{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-animation: intro-img-bg 10s linear infinite alternate;
+    -moz-animation: intro-img-bg 10s linear infinite alternate;
+    -ms-animation: intro-img-bg 10s linear infinite alternate;
+    -o-animation: intro-img-bg 10s linear infinite alternate;
+    animation: intro-img-bg 10s linear infinite alternate;
+}
+@-webkit-keyframes intro-img-bg {
+    0%{
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100%{
+        -webkit-transform: translateY(-50px);
+        -moz-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+        -o-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+}
+@keyframes intro-img-bg {
+    0%{
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100%{
+        -webkit-transform: translateY(-50px);
+        -moz-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+        -o-transform: translateY(-50px);
+        transform: translateY(-50px);
+    }
+}
+
 /*区块阴影效果*/
 .shadow{
     box-shadow: 0 0 50px #ddd;
