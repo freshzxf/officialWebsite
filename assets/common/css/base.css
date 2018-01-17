@@ -43,8 +43,10 @@
 .red,a.red{color:#FF5722!important;}
 .dark_red,a.red{color:#FF5722!important;}
 .blue,a.blue{color:#01AAED!important;}
+.lblue,a.lblue{color: #93ccff !important;}
 .yellow,a.yellow{color:#FFB800!important;}
 .green,a.green{color:#5FB878!important;}
+.lgreen,a.lgreen{color: #9acc8f !important;}
 .dark_green,a.dark_green{color:#009688!important;}
 .lgray,a.lgray{color: #cbcbcb!important;}
 .gray,a.gray{color:#888!important;}
@@ -64,6 +66,7 @@
 /*背景颜色*/
 .bg_f4{background-color: #f4f4f4;}
 .bg_fff{background-color: #ffffff;}
+.bg_lblue{background-color: #93ccff;}
 .bg_none{background-color: transparent;}
 /*定位*/
 .tl{text-align:left}
@@ -189,11 +192,13 @@
 .pt20{padding-top:20px}
 .pt30{padding-top:30px}
 .pt50{padding-top:50px}
+.pt80{padding-top:80px}
 .pb5{padding-bottom:5px}
 .pb10{padding-bottom:10px}
 .pb15{padding-bottom:15px}
 .pb30{padding-bottom:30px}
 .pb50{padding-bottom:50px}
+.pb80{padding-bottom:80px}
 .pb100{padding-bottom:100px}
 .pl0{padding-left:0}
 .pl5{padding-left:5px}

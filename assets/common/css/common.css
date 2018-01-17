@@ -3,7 +3,7 @@
 .layui-btn-primary:hover{border-color: #1E9FFF}
 .layui-breadcrumb a:hover{color: #1E9FFF!important;}
 .layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after{background-color: #1E9FFF;}
-.layui-fixbar li{ background-color: #83c7ff !important;}
+.layui-fixbar li{ background-color: #9F9F9F !important;}
 /*导航栏logo*/
 .top-nav {
     position: fixed;
@@ -64,6 +64,9 @@
 .border_top_green_2px {
     border-top: 2px solid #60B878;
 }
+.border_top_red_2px {
+    border-top: 2px solid #FF5722;
+}
 .border_top_blue_2px {
     border-top: 2px solid #01AAED;
 }
@@ -111,5 +114,10 @@
 }
 /*隐藏百度地图版权标志*/
 .anchorBL{display:none;}
+
+/*页脚*/
+.footer{background-image: url('../img/top_banner.jpg')}
+.footdl a:hover{color: #01AAED!important;}
+.foot_copyright{padding: 10px;border-top: 1px solid #4c5162}
 
 

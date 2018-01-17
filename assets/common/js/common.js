@@ -18,7 +18,7 @@ var win_width = $(window).width();
 var win_height = $(window).height();
 var lay;
 if (typeof ajaxlayui === 'undefined') {
-    layui.use(['layer', 'flow', 'util', 'carousel', 'layedit'], function () {
+    layui.use(['layer', 'flow', 'util','element', 'carousel', 'layedit'], function () {
         lay = layui;
         util = lay.util;
         LC_function();
@@ -248,7 +248,7 @@ function LC_function() {
     util.fixbar({
         bar1: true
         , bar2: true
-        , css: {right: 30, bottom: 100}
+        , css: {right: 25, bottom: 80}
         , bgcolor: '#393D49'
         , click: function (type) {
             if (type === 'bar1') {

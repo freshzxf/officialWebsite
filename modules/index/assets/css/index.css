@@ -1,6 +1,6 @@
 /*固定背景*/
 .bg_code {
-    background: url(../img/74.jpg) no-repeat center fixed;
+    background: url(../img/code-bg.jpg) no-repeat center fixed;
     background-size: cover;
 }
 .bg_csto {
@@ -158,8 +158,3 @@ i.fast-entry:hover {
 .partners ul li img:hover {
     box-shadow: 0 10px 50px #c5c5c5;
 }
-
-/*
-页脚*/
-.footdl a:hover{color: #01AAED!important;}
-.foot_copyright{padding: 10px;border-top: 1px solid #3f4351}
