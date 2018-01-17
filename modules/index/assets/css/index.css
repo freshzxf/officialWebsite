@@ -1,11 +1,12 @@
 /*固定背景*/
 .bg_code {
-    background: url(../img/code-bg.jpg) no-repeat center fixed;
+    background: url(../img/mountain.jpg) no-repeat center;
     background-size: cover;
 }
 .bg_csto {
     background:#f4f4f4 url(../img/cstory-bg.png) no-repeat center;
 }
+.bg-whitemask{background:url(../img/white-mask.png) no-repeat center;}
 
 .view_more {
     margin-top: 50px;
@@ -140,12 +141,10 @@ i.fast-entry:hover {
     width: 1200px;
     margin: auto
 }
-
 .partners ul li {
     float: left;
     padding: 20px 0 50px 0
 }
-
 .partners ul li img {
     margin: 0 10px;
     -moz-transition: all 1s ease 0s;
@@ -154,7 +153,6 @@ i.fast-entry:hover {
     -webkit-transition: all 1s ease 0s;
     transition: all 1s ease 0s;
 }
-
 .partners ul li img:hover {
-    box-shadow: 0 10px 50px #c5c5c5;
+    box-shadow: 0 7px 30px rgba(197,197,197,0.5);
 }
