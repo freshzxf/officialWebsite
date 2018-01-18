@@ -52,6 +52,7 @@
     background-position: top center;
     padding: 50px 0;
     margin-top: 60px;
+    background: url('../img/top_banner.jpg') no-repeat center;
 }
 .caption h1 {
     display: inline-block;

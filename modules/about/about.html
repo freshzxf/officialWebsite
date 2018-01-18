@@ -18,12 +18,22 @@
 </head>
 <body>
 <!--顶部导航-->
-<div class="layui-header layui-bg-black">
-    <div class="layui-main">
+<div class="layui-fluid">
+    <div class="layui-row top-nav">
         <div class="logo fl"><a href="http://www.xiaoyut.cn" class="block w h">万创宏达</a></div>
-        <ul class="layui-nav fl">
+        <i class="layui-icon btn open mob">&#xe65f;</i>
+        <i class="layui-icon btn close none">&#xe671;</i>
+        <ul class="layui-nav fr pc">
             <li class="layui-nav-item layui-this"><a href="index.html">网站首页</a></li>
-            <li class="layui-nav-item "><a href="">业务范围</a></li>
+            <li class="layui-nav-item ">
+                <a href="">业务范围</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="../area/area-official.html">企业宣传官网</a></dd>
+                    <dd><a href="../area/area-software.html">OA/CRM/ERP管理软件</a></dd>
+                    <dd><a href="../area/area-wechat.html">微信产品服务</a></dd>
+                    <dd><a href="../area/area-app.html">移动APP/流媒体</a></dd>
+                </dl>
+            </li>
             <li class="layui-nav-item ">
                 <a href="">产品介绍</a>
                 <dl class="layui-nav-child">
@@ -34,7 +44,7 @@
                 </dl>
             </li>
             <li class="layui-nav-item ">
-                <a href="">成功案例</a>
+                <a href="../cases/cases.html">成功案例</a>
                 <dl class="layui-nav-child">
                     <dd><a href="">企业门户</a></dd>
                     <dd><a href="">OA办公自动化系统</a></dd>
@@ -42,21 +52,23 @@
                     <dd><a href="">营养改善管理系统</a></dd>
                 </dl>
             </li>
+            <li class="layui-nav-item "><a href="../news/news.html">万创动态</a></li>
             <li class="layui-nav-item "><a href="">关于万创</a></li>
             <li class="layui-nav-item "><a href="">联系万创</a></li>
         </ul>
-        <ul class="layui-nav fr">
+        <!--<ul class="layui-nav fr">
             <li class="layui-nav-item top-user"><i class="fa fa-user-circle-o f25 mr5 vm"></i>管理员</li>
-        </ul>
+        </ul>-->
     </div>
 </div>
 
 <!--页面标题背景-->
-<div id="caption" class="caption tc" style="background: url('./assets/img/about_banner.jpg') no-repeat center;">
-    <h1 class="layui-anim layui-anim-scale">关于我们</h1>
-    <br><br>
-    <a href="javascript:;" id="onlineChatBtn" class="layui-btn layui-btn-big layui-anim layui-anim-scale">在线客服</a>
-    <a href="tel:0791-86877768" class="layui-btn layui-btn-primary layui-btn-big layui-anim layui-anim-scale" style="background:none;color:#fff;">0791-86877768</a>
+<div class="caption tc">
+    <h1 class="layui-anim layui-anim-scale">关于万创</h1>
+    <div class="mt15">
+        <a href="javascript:;" id="onlineChatBtn" class="layui-btn layui-btn-normal layui-anim layui-anim-scale">在线客服</a>
+        <a href="tel:0791-86877768" class="layui-btn layui-btn-primary bg_none white layui-anim layui-anim-scale">0791-86877768</a>
+    </div>
 </div>
 
 <div class="layui-main pt50 pb50">
@@ -150,73 +162,50 @@
 </div>
 
 <!--页脚-->
-<div class="layui-bg-cyan">
-    <div class="layui-main pt50 pb50">
-        <div class="layui-row layui-col-space30 lgray">
-            <div class="layui-col-xs6">
-                <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">关于我们<a href="about.html"
-                                                                                       class="fr lgray">了解详情</a>
-                </blockquote>
-                <p class=" lh200">
-                    <span class="fa fa-phone mr5 white" title="电话号码"></span><span class="mr10" title="电话号码">0791-83953621</span>
-                    <span class="fa fa-send ml10 mr5 white" title="企业邮箱"></span><span
-                        title="企业邮箱">3151511@spic.com</span>
-                </p>
-                <p class=" lh200">
-                    <span class="fa fa-fax mr5 white" title="传真号码"></span><span class="mr10"
-                                                                                title="传真号码">0791-83953621</span>
-                    <span class="fa fa-map-marker ml10 mr5 white" title="企业地址"></span><span title="企业地址">江西省南昌市青山湖区艾溪湖北路66号</span>
-                </p>
-                <p class="f14 lh200">创新创造是我们的特质。国家电投倡导全面创新创造，将创新融入技术、产品、制度、组织、文化、观念等方方面面；倡导全员创新创造，使创新创造成为国家电投人的品格。
-                </p>
-                <div class="mt30">
-                    <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">我们团队</blockquote>
-                    <ul class="group_list_xs">
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group1-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                        <li><a href="javascript:;"><img alt="" src="../../assets/common/img/avatars/group2-xs.jpg"></a>
-                        </li>
-                    </ul>
+<div class="layui-bg-black footer lgray">
+    <div class="layui-container pt30 pb30 pc">
+        <div class="layui-row lh200">
+            <div class="layui-col-md4">
+                <div class="fl">
+                    <p>服务热线（工作日9:00-17:00）</p>
+                    <p>0773-8980636</p>
+                    <p>服务邮箱：pay@chshcms.com</p>
+                    <p>客服QQ：2811358863</p>
                 </div>
             </div>
-            <div class="layui-col-xs6">
-                <blockquote class="layui-elem-quote lh0 mb20 white f20 bg_none">企业位置</blockquote>
-                <div id="mapContainer" class="h300"></div>
+            <div class="layui-col-md4">
+                <dl class="fl ml50 pl10 footdl tc">
+                    <dt>万创宏达</dt>
+                    <li><a href="" class="lgray f14">万创动态</a></li>
+                    <li><a href="" class="lgray f14">关于万创</a></li>
+                    <li><a href="" class="lgray f14">联系万创</a></li>
+                </dl>
+                <dl class="fr mr50 pr10 footdl tc">
+                    <dt>品牌塑造</dt>
+                    <li><a href="" class="lgray f14">业务范围</a></li>
+                    <li><a href="" class="lgray f14">产品简介</a></li>
+                    <li><a href="" class="lgray f14">成功案例</a></li>
+                </dl>
+            </div>
+            <div class="layui-col-md4">
+                <div class="fr">
+                    <table>
+                        <tr>
+                            <td>
+                                <p>校育通</p>
+                                <p>家校互动专家</p>
+                            </td>
+                            <td>
+                                <img class="ml10 w150 h150" src="../../assets/common/img/erweima.jpg">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
+    <p class="f14 tc foot_copyright">2018 © 贵州万创宏达科技有限责任公司. ALL Rights Reserved</p>
 </div>
-<!--版权声明-->
-<div class="layui-bg-black">
-    <div class="layui-main pt10 pb10 tc lgray">
-        <p class="f14">2017 © 国电电投江西能源销售有限公司. ALL Rights Reserved</p>
-    </div>
-</div>
-
 <script src="../../assets/common/js/jquery.min.js"></script>
 <script src="../../assets/common/layui/layui.js"></script>
 <!--lib-->
@@ -226,10 +215,5 @@
 <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
 <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-<script>
-
-</script>
-
 </body>
 </html>
